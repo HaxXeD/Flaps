@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void PlayerController()
     {
-        if (Input.GetKeyDown(KeyCode.Space)&&!isActive)
+        if (Input.GetKeyDown(KeyCode.Space)||Input.GetMouseButtonDown(0)&&!isActive)
         {
             rb.velocity = Vector2.up * impulse;
             animator.SetBool("impulse", true);

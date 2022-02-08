@@ -28,7 +28,7 @@ public class GameOver : MonoBehaviour
     {
         if (isGameOver)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space)||Input.GetMouseButtonDown(0))
             {
                 SceneManager.LoadScene(0);
             }
