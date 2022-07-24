@@ -1,0 +1,61 @@
+{
+    "questions":[
+        {
+            "Question": " A force that moves an object away.",
+            "Correct": "Push",
+            "Incorrect1": "Pull",
+            "Incorrect2": "Friction",
+            "Incorrect3": "Lift"
+        },
+        {
+            "Question":"Motion is a push or a pull.",
+            "Correct": "False",
+            "Incorrect1": "True",
+            "Incorrect2": "may be",
+            "Incorrect3": "don't know"
+        },
+        {
+            "Question":"what is the act of moving?",
+            "Correct": "motion",
+            "Incorrect1": "gravity",
+            "Incorrect2": "friction",
+            "Incorrect3": "push"
+        },
+        {
+            "Question":"When you push or pull an object, do you give the object energy?",
+            "Correct": "yes",
+            "Incorrect1": "no",
+            "Incorrect2": "may be",
+            "Incorrect3": "dont know"
+        },
+        {
+            "Question":"A force that moves an object closer",
+            "Correct": "pull",
+            "Incorrect1": "push",
+            "Incorrect2": "lift",
+            "Incorrect3": "heavy"
+        },
+        {
+            "Question":"A force that moves an object closer",
+            "Correct": "pull",
+            "Incorrect1": "push",
+            "Incorrect2": "lift",
+            "Incorrect3": "heavy"
+        },
+        {
+            "Question":"when a object is in ______ it changes its position",
+            "Correct": "motion",
+            "Incorrect1": "friction",
+            "Incorrect2": "gravity",
+            "Incorrect3": "light"
+        },
+        {
+           "Question": "Motion is the changing of speed and direction",
+            "Correct": "False",
+            "Incorrect1": "True",
+            "Incorrect2": "may be",
+            "Incorrect3": " dont know"
+        }
+    ] 
+}
+            

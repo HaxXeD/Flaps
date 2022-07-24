@@ -9,6 +9,9 @@ TagManager:
   - fuel
   - enemy
   - timer
+  - invisible
+  - magnet
+  - coincollector
   layers:
   - Default
   - TransparentFX

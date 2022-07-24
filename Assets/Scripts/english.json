@@ -1,0 +1,82 @@
+{
+    "questions":[
+        {
+            "Question": "I __ with my fingers.",
+            "Correct": "Touch",
+            "Incorrect1": "Taste",
+            "Incorrect2": "Hear",
+            "Incorrect3": "Smell"
+        },
+        {
+            "Question":"I __ with my brain.",
+            "Correct": "Think",
+            "Incorrect1": "Smell",
+            "Incorrect2": "See",
+            "Incorrect3": "Hear"
+        },
+        {
+            "Question":"Find the verb? >> Sadie raced down the stairs.",
+            "Correct": "raced",
+            "Incorrect1": "down",
+            "Incorrect2": "sadie",
+            "Incorrect3": "the"
+        },
+        {
+            "Question":"Find the verb? >> Mom sang along to the pretty music.",
+            "Correct": "sang",
+            "Incorrect1": "music",
+            "Incorrect2": "Mom",
+            "Incorrect3": "pretty"
+        },
+        {
+            "Question":"Find the verb? >> Tom ran home after school.",
+            "Correct": "ran",
+            "Incorrect1": "home",
+            "Incorrect2": "Tom",
+            "Incorrect3": "after"
+        },
+        {
+            "Question":"__ a horse.",
+            "Correct": "ride",
+            "Incorrect1": "tell",
+            "Incorrect2": "turn on",
+            "Incorrect3": "play"
+        },
+        {
+            "Question":"Correct past tense verb >> My mom __ a cake.",
+            "Correct":"baked",
+            "Incorrect1":"bakes",
+            "Incorrect2":"is baking",
+            "Incorrect3":"bake"
+        },
+        {
+            "Question":"Alfred __ he had ten marbles.",
+            "Correct":"thought",
+            "Incorrect1":"thinked",
+            "Incorrect2":"thinking",
+            "Incorrect3":"think"
+        },
+        {
+            "Question":"Past tense of the word dive",
+            "Correct":"dove",
+            "Incorrect1":"dave",
+            "Incorrect2":"diven",
+            "Incorrect3":"dived"
+        },
+        {
+            "Question":"Jerry had __ a fish for dinner.",
+            "Correct":"caught",
+            "Incorrect1":"caughted",
+            "Incorrect2":"caughten",
+            "Incorrect3":"catched"
+        },
+        {
+            "Question":"Rose was __ on May 12, 2000.",
+            "Correct":"born",
+            "Incorrect1":"borne",
+            "Incorrect2":"borned",
+            "Incorrect3":"bore"
+        }
+    ] 
+}
+            

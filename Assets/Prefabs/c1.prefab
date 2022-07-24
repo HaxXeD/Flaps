@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6091978756744214940}
   - component: {fileID: 6091978756744214941}
   - component: {fileID: 2989923829181652766}
+  - component: {fileID: 8410707374331797250}
   m_Layer: 0
   m_Name: c1
   m_TagString: coin
@@ -50,7 +51,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073bcbac5a7d42e4eb943247ed4d6169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMagnetEnabled: 0
 --- !u!58 &6091978756744214941
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -145,6 +146,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c706c1c9e649040bced365c9d6c146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementType: 0
+  movementType: 1
   speedMinMax: {x: 3, y: 5}
   maxAmplitude: {x: 2, y: 3}
+--- !u!114 &8410707374331797250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6091978756744214930}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6fa1c4d41f25e4da55540aa732228c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -1,6 +1,4 @@
 using UnityEngine;
-using TMPro;
-using UnityEngine.SceneManagement;
 
 public class lowerCollider : MonoBehaviour
 {
@@ -9,11 +7,10 @@ public class lowerCollider : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     { 
-        if(collision.gameObject.tag == "player")
+        if(collision.gameObject == player)
         {
             OnPlayerDeath?.Invoke();
-            Destroy(player.transform.parent.gameObject);
+            Destroy(player);
         }
     }
-
 }

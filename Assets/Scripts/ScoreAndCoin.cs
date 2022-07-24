@@ -3,13 +3,9 @@ using TMPro;
 
 public class ScoreAndCoin: MonoBehaviour
 {
-    [SerializeField] TMP_Text Score;
-    [SerializeField] TMP_Text Coin;
+    [SerializeField] TMP_Text Score,Coin;
+    int score = 0,highScore = 0,coin = 1, totalCoin = 0;
     bool isGameOver;
-    int score = 0;
-    int highScore = 0;
-    int coin = 1;
-    int totalCoin = 0;
 
 
     private void Start()
@@ -43,7 +39,7 @@ public class ScoreAndCoin: MonoBehaviour
     {
         if (highScore < CurrentScore())
             PlayerPrefs.SetInt("highscore", CurrentScore());
-        print(PlayerPrefs.GetInt("highscore"));
+        // print(PlayerPrefs.GetInt("highscore"));
         return PlayerPrefs.GetInt("highscore");        
     }
     public int TotalCoins()

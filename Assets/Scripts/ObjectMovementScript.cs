@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -12,12 +10,9 @@ public class ObjectMovementScript : MonoBehaviour
     }
 
     [SerializeField] MovementType movementType;
-
     Vector2 pos;
-
     [SerializeField] Vector2 speedMinMax;
     float visibility;
-
     //for Wave
     [SerializeField] Vector2 maxAmplitude;
     //float currentAmplitude;

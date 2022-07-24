@@ -3,9 +3,13 @@ using UnityEngine;
 
 public class ScrollingBackground : MonoBehaviour
 {
-    [SerializeField] RawImage _img;
+    RawImage _img;
     [SerializeField] Vector2 speedMixMax_Horizontal;
     [SerializeField] Vector2 speedMinMax_Vertical;
+
+    void Start(){
+        _img = GetComponent<RawImage>();
+    }
 
 
     private void Update()
