@@ -76,6 +76,349 @@
             "Incorrect1":"borne",
             "Incorrect2":"borned",
             "Incorrect3":"bore"
+        },
+        {
+            "Question":"What is the prefix in preheat?",
+            "Correct": "pre",
+            "Incorrect1": "heat",
+            "Incorrect2": "at",
+            "Incorrect3": "none "
+        },
+        {
+            "Question":"What is the prefix in mismanage?",
+            "Correct": "mis ",
+            "Incorrect1": "manage",
+            "Incorrect2": "age",
+            "Incorrect3": "none"
+        },
+        {
+            "Question":"What is the prefix in prepaid?",
+            "Correct": "pre",
+            "Incorrect1": "paid",
+            "Incorrect2": "both",
+            "Incorrect3": "none"
+        },
+        {
+           "Question": "What is the prefix in rematch?",
+            "Correct": "re",
+            "Incorrect1": "match",
+            "Incorrect2": "both",
+            "Incorrect3": "none"
+        },
+        {
+           "Question": "What is the prefix in uncover?",
+            "Correct": "un",
+            "Incorrect1": "cover",
+            "Incorrect2": "both",
+            "Incorrect3": "none"
+        },
+        {
+           "Question": "What is the prefix in redo?",
+            "Correct": "re",
+            "Incorrect1": "do",
+            "Incorrect2": "both",
+            "Incorrect3": "none"
+        },
+        {
+           "Question": "What is the prefix in unfinished?",
+            "Correct": "un",
+            "Incorrect1": "finished",
+            "Incorrect2": "ed",
+            "Incorrect3": "none"
+        },
+        {
+           "Question": "What is the prefix in disrespect?",
+            "Correct": "dis",
+            "Incorrect1": "respect",
+            "Incorrect2": "both",
+            "Incorrect3": "none"
+        },
+        {
+           "Question": "What is the prefix in forehead?",
+            "Correct": "fore",
+            "Incorrect1": "head",
+            "Incorrect2": "both",
+            "Incorrect3": "none"
+        },
+        {
+           "Question": "What is the prefix in dishonor?",
+            "Correct": "dis",
+            "Incorrect1": "honour",
+            "Incorrect2": "both",
+            "Incorrect3": "none"
+        },
+        {
+           "Question": "What is the suffix in forgetful?",
+            "Correct": "ful",
+            "Incorrect1": "forget",
+            "Incorrect2": "get",
+            "Incorrect3": "none"
+        },
+        {
+           "Question": "What is the suffix in management?",
+            "Correct": "ment",
+            "Incorrect1": "manage",
+            "Incorrect2": "age",
+            "Incorrect3": "none"
+        },
+        {
+           "Question": "What is the suffix in useful?",
+            "Correct": "ful",
+            "Incorrect1": "use",
+            "Incorrect2": "both",
+            "Incorrect3": "none"
+        },
+        {
+           "Question": "What is the suffix in brotherhood?",
+            "Correct": "hood",
+            "Incorrect1": "brother",
+            "Incorrect2": "both",
+            "Incorrect3": "none"
+        },
+        {
+           "Question": "What is the suffix in friendship?",
+            "Correct": "ship",
+            "Incorrect1": "friend",
+            "Incorrect2": "both",
+            "Incorrect3": "none"
+        },
+        {
+           "Question": "What is the suffix in comfortable?",
+            "Correct": "able",
+            "Incorrect1": "comfort",
+            "Incorrect2": "both",
+            "Incorrect3": "none"
+        },
+        {
+           "Question": "What is the suffix in drinkable?",
+            "Correct": "able",
+            "Incorrect1": "drink",
+            "Incorrect2": "ink",
+            "Incorrect3": "none"
+        },
+        {
+           "Question": "What is the suffix in helpful?",
+            "Correct": "ful",
+            "Incorrect1": "help",
+            "Incorrect2": "both",
+            "Incorrect3": "none"
+        },
+        {
+          "Question":  "What is the suffix in windy?",
+            "Correct": "y",
+            "Incorrect1": "wind",
+            "Incorrect2": "both ",
+            "Incorrect3": "none"
+        },
+        {
+           "Question": "If the computer crashes,____start again.",
+            "Correct": "re",
+            "Incorrect1": "dis",
+            "Incorrect2": "mis ",
+            "Incorrect3": "pre"
+        },
+        {
+           "Question": "The company is in chaos due to_____management.",
+            "Correct": "mis ",
+            "Incorrect1": "dis",
+            "Incorrect2": "pre",
+            "Incorrect3": "un"
+        },
+        {
+           "Question": "There must be____understanding. I am not  the person your looking for.",
+            "Correct": "mis ",
+            "Incorrect1": "pre",
+            "Incorrect2": "dis",
+            "Incorrect3": "un"
+        },
+        {
+           "Question": "Before you bake a cake,___heat the oven.",
+            "Correct": "pre",
+            "Incorrect1": "dis",
+            "Incorrect2": "re",
+            "Incorrect3": "un"
+        },
+        {
+           "Question": "We____packeted our bags when we got home.",
+            "Correct": "un",
+            "Incorrect1": "re",
+            "Incorrect2": "pre",
+            "Incorrect3": "dis"
+        },
+        {
+            "Question":  "People often____judge with outer looks.",
+            "Correct": "mis",
+            "Incorrect1": "re",
+            "Incorrect2": "dis",
+            "Incorrect3": "un"
+        },
+        {
+           "Question": "Since she_____counted, there were too many crayons.",
+            "Correct": "mis",
+            "Incorrect1": "re",
+            "Incorrect2": "dis",
+            "Incorrect3": "in"
+        },
+        {
+           "Question": "This book contain a lot of___prints, so I exchanged it.",
+            "Correct": "mis",
+            "Incorrect1": "in ",
+            "Incorrect2": "dis",
+            "Incorrect3": "re"
+        },
+        {
+            "Question": "The car crashed because it was_____used.",
+            "Correct": "mis",
+            "Incorrect1": "dis",
+            "Incorrect2": "un ",
+            "Incorrect3": "re"
+        },
+        {
+            "Question": "The teacher told me to____write the essay.",
+            "Correct": "re",
+            "Incorrect1": "dis",
+            "Incorrect2": "un",
+            "Incorrect3": "mis"
+        },
+        {
+            "Question": "Mr. Jone_____counted the money, so there wasn't enoungh to buy a watch.",
+            "Correct": "mis",
+            "Incorrect1": "un",
+            "Incorrect2": "re",
+            "Incorrect3": "in"
+        },
+        {
+            "Question": "He___uses scrap metals to make necklaces.",
+            "Correct": "re",
+            "Incorrect1": "dis",
+            "Incorrect2": "un",
+            "Incorrect3": "mis"
+        },
+        {
+           "Question":  "Are there really 14 cups, or did you____count them?",
+            "Correct": "mis",
+            "Incorrect1": "un ",
+            "Incorrect2": "dis ",
+            "Incorrect3": "in"
+        },
+        {
+           "Question":  "The movie____starts after a short break.",
+            "Correct": "re",
+            "Incorrect1": "un",
+            "Incorrect2": "in",
+            "Incorrect3": "mis"
+        },
+        {
+           "Question":  "After the legohouse fell down, the kids started___building it.",
+            "Correct": "re",
+            "Incorrect1": "in",
+            "Incorrect2": "mis ",
+            "Incorrect3": "un"
+        },
+        {
+           "Question":  "Henry dropped out of the college and then____joined the next year.",
+            "Correct": "re",
+            "Incorrect1": "mis",
+            "Incorrect2": "dis ",
+            "Incorrect3": "un"
+        },
+        {
+           "Question":  "The criminals tried not to___behave with a Policeman.",
+            "Correct": "mis",
+            "Incorrect1": "dis",
+            "Incorrect2": "un",
+            "Incorrect3": "in"
+        },
+        {
+            "Question": "Will you___lock the door for me? I am stuck here.",
+            "Correct": "un",
+            "Incorrect1": "dis",
+            "Incorrect2": "in ",
+            "Incorrect3": "re"
+        },
+        {
+           "Question": "If it has been raining for 2 days, it's__safe for travelling.",
+            "Correct": "un",
+            "Incorrect1": "in ",
+            "Incorrect2": "re ",
+            "Incorrect3": "dis"
+        },
+        {
+           "Question": "____run the program on my computer and see if it installs this time.",
+            "Correct": "re",
+            "Incorrect1": "in ",
+            "Incorrect2": "dis",
+            "Incorrect3": "mis"
+        },
+        {
+           "Question": "Please__think before you make decision.",
+            "Correct": "re",
+            "Incorrect1": "dis",
+            "Incorrect2": "mis ",
+            "Incorrect3": "in"
+        },
+        {
+           "Question": "The office is closed now, but it will___open tomorrow.",
+            "Correct": "re",
+            "Incorrect1": "dis",
+            "Incorrect2": "mis ",
+            "Incorrect3": "in"
+        },
+        {
+           "Question": "If you___obey my command, you will be removed immediately.",
+            "Correct": "dis",
+            "Incorrect1": "mis",
+            "Incorrect2": "re",
+            "Incorrect3": "in"
+        },
+        {
+          "Question":  "She is___happy with her salary.",
+            "Correct": "un",
+            "Incorrect1": "dis",
+            "Incorrect2": "re ",
+            "Incorrect3": "in"
+        },
+        {
+           "Question": "__charge your mobile battery if it is under 30 percent.",
+            "Correct": "re",
+            "Incorrect1": "dis",
+            "Incorrect2": "in",
+            "Incorrect3": "un"
+        },
+        {
+           "Question": "If the man with the black jacket__appears on the street, catch him.",
+            "Correct": "re",
+            "Incorrect1": "dis",
+            "Incorrect2": "in ",
+            "Incorrect3": "un"
+        },
+        {
+           "Question": "She always skips___view of the previous episode.",
+            "Correct": "pre",
+            "Incorrect1": "dis",
+            "Incorrect2": "mis ",
+            "Incorrect3": "in"
+        },
+        {
+           "Question": "Even though I__played lecture videos several times, I could not understand. ",
+            "Correct": "re",
+            "Incorrect1": "dis",
+            "Incorrect2": "mis ",
+            "Incorrect3": "un"
+        },
+        {
+           "Question": "I took a wrong turn because I___read the sign.",
+            "Correct": "mis",
+            "Incorrect1": "dis",
+            "Incorrect2": "un",
+            "Incorrect3": "re"
+        },
+        {
+           "Question": "The Titanic was____covered in 1985.",
+            "Correct": "dis",
+            "Incorrect1": "re",
+            "Incorrect2": "pre",
+            "Incorrect3": "in"
         }
     ] 
 }
