@@ -10,12 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6091978756744214937}
   - component: {fileID: 6091978756744214942}
-  - component: {fileID: 6091978756744214943}
   - component: {fileID: 6091978756744214940}
   - component: {fileID: 6091978756744214941}
   - component: {fileID: 2989923829181652766}
   - component: {fileID: 8410707374331797250}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: c1
   m_TagString: coin
   m_Icon: {fileID: 0}
@@ -75,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1fd47bd156606fd4c8c61c7a6119fee7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a70743cfaf14f14d81d7db3b198d5ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,25 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6091978756744214943
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6091978756744214930}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b21188a267e09084f804907dfa1bd9d6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &6091978756744214940
 MonoBehaviour:
   m_ObjectHideFlags: 0

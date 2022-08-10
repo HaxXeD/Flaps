@@ -18,13 +18,14 @@ public class LevelManager : MonoBehaviour
         trasitionImage.SetActive(true);
         trasitionImage.GetComponent<CanvasGroup>().alpha = 0f;
         // trasitionImage.transform.localPosition = new Vector2(-Screen.width,trasitionImage.transform.localPosition.y);
-        trasitionImage.GetComponent<CanvasGroup>().DOFade(1f,.5f).OnComplete(()=>{EndTrasition(sceneIndex);});
+        trasitionImage.GetComponent<CanvasGroup>().DOFade(1f,.5f).SetUpdate(true).OnComplete(()=>{EndTrasition(sceneIndex);});
     }
 
     private void EndTrasition(int _index)
     {
         SceneManager.LoadScene(_index);
-        trasitionImage.GetComponent<CanvasGroup>().DOFade(0f,.5f).OnComplete(()=>sceneTrasition.GetTrasitionImage().SetActive(false));
+        Time.timeScale = 1f;
+        trasitionImage.GetComponent<CanvasGroup>().DOFade(0f,.5f).SetUpdate(true).OnComplete(()=>sceneTrasition.GetTrasitionImage().SetActive(false));
     }
 
     // IEnumerator SceneChange(int _index)

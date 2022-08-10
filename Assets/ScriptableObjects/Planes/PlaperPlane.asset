@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f45a97f6f3cd354a8c3ec4254db3f59, type: 3}
+  m_Name: PlaperPlane
+  m_EditorClassIdentifier: 
+  planeTitle: Paper Plane
+  planeImage: {fileID: 21300000, guid: 90c89bef31f08a845a56c374be485658, type: 3}
+  planeCost: 100
+  isPurchased: 1
+  isSelected: 0
+  planeObject: {fileID: 6200718290115427860, guid: a33e5bd917e816941814e0ae0a9ad7f2,
+    type: 3}

@@ -1,10 +1,11 @@
 using UnityEngine;
 using System.Collections;
-
+using UnityEngine.Events;
 public class PlayerMovement : MonoBehaviour
 {
+    public UnityEvent OnUnpause = new UnityEvent();
     public event System.Action OnInvisible,OffInvisible;
-    GameObject magnetBox;
+    GameObject magnetBox,shield;
     bool isInvisible = false;
     public bool ReturnIsInvisible(){
         return isInvisible;
@@ -13,21 +14,31 @@ public class PlayerMovement : MonoBehaviour
     // [SerializeField] Button jumpButton = null;
     Rigidbody2D rb;
     Animator animator;
+    ListAudio listAudio;
 
     bool CanFly = false;
 
     private void Awake()
     {
         magnetBox = transform.GetChild(0).gameObject;
+        shield = transform.GetChild(1).gameObject;
         magnetBox.SetActive(false);
+        shield.SetActive(false);
         CanFly = true;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        listAudio = FindObjectOfType<ListAudio>();
         FindObjectOfType<FillScript>().onFuelEmpty += DisableRigidbody;
         FindObjectOfType<Spawner>().OnQuestionEnable += DisableCouroutine;
         Time.timeScale = 0f;
         Time.fixedDeltaTime = Time.timeScale * 0.02f;
-        StartCoroutine(FindObjectOfType<EaseUp>().PowerUpTime(1f,2f));
+        StartCoroutine(FindObjectOfType<EaseUp>().PowerUpTime(.5f,2f));
+        FindObjectOfType<SettingButtons>().OnPause+=StopEaseUp;
+        FindObjectOfType<SettingButtons>().OnUnpause+=StartEaseUp;
+    }
+
+    void Start(){
+        OnUnpause.AddListener(StartEaseUp);
     }
 
     private void DisableCouroutine()
@@ -40,6 +51,16 @@ public class PlayerMovement : MonoBehaviour
         CanFly = false;
     }
 
+    private void StopEaseUp(){
+        FindObjectOfType<EaseUp>().StopAllCoroutines();
+        Time.timeScale = 0f;
+    }
+
+    public void StartEaseUp(){
+        print("unpaused");
+        StartCoroutine(FindObjectOfType<EaseUp>().PowerUpTime(.5f,2f));
+
+    }
     // Update is called once per frame
     void Update()
     {
@@ -52,11 +73,12 @@ public class PlayerMovement : MonoBehaviour
         if(CanFly){
             if (Input.GetKeyDown(KeyCode.Space)||Input.GetMouseButtonDown(0))
             {
+                listAudio.PlayAudioWithOneShot(6);
                 rb.velocity = Vector2.up * impulse;
-                animator.SetBool("impulse", true);
+                // animator.SetBool("impulse", true);
 
             }
-            animator.SetFloat("yVelocity", rb.velocity.y);
+            // animator.SetFloat("yVelocity", rb.velocity.y);
         }
     }
 
@@ -70,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
         // }
         if (collision.CompareTag("timer"))
         {
+            listAudio.PlayAudioWithOneShot(4);
             Time.timeScale = 0.5f;
             Time.fixedDeltaTime = Time.timeScale * 0.02f;
             // StartCoroutine(PowerUpTime(5f));
@@ -78,20 +101,41 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if(collision.CompareTag("invisible")){
+            listAudio.PlayAudioWithOneShot(5);
             // Color tmp = gameObject.GetComponent<SpriteRenderer>().color;
             // tmp.a = .5f;
             // gameObject.GetComponent<SpriteRenderer>().color = tmp;
-           StartCoroutine(FadeTo(.2f,1f,10f));
+            shield.SetActive(true);
+            Color newColor = new Color(1, 1, 1, 0);
+            shield.GetComponent<SpriteRenderer>().color = newColor;
+           StartCoroutine(FadeTo(.8f,1f,10f));
         }
 
         if(collision.CompareTag("magnet")){
-            StartCoroutine(MagnetEnableDisable(10));
+            listAudio.PlayAudioWithOneShot(3);
+            magnetBox.SetActive(true);
+            Color newColor = new Color(1, 1, 1, 0);
+            magnetBox.GetComponent<SpriteRenderer>().color = newColor;
+            StartCoroutine(MagnetEnableDisable(.5f,1f,10f));
         }
     }
-    IEnumerator MagnetEnableDisable(float time){
+    IEnumerator MagnetEnableDisable(float aValue, float aTime, float bTime){
         magnetBox.SetActive(true);
-        yield return new WaitForSeconds(time);
-        magnetBox.SetActive(false);
+        float alpha = magnetBox.GetComponent<SpriteRenderer>().color.a;
+         for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+         {
+             Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha, aValue, t));
+             magnetBox.GetComponent<SpriteRenderer>().color = newColor;
+             yield return null;
+         }
+         yield return new WaitForSecondsRealtime(bTime);
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+         {
+             Color newColor = new Color(1, 1, 1, Mathf.Lerp(aValue, 0, t));
+             magnetBox.GetComponent<SpriteRenderer>().color = newColor;
+             yield return null;
+         }
+         magnetBox.SetActive(false);
     }
 
     
@@ -102,20 +146,21 @@ public class PlayerMovement : MonoBehaviour
         // col2D.enabled = false;
         // col2D.isTrigger = true;
         // isInvisible = true;
-         float alpha = transform.GetComponent<SpriteRenderer>().color.a;
+         float alpha = shield.GetComponent<SpriteRenderer>().color.a;
          for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
          {
              Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha, aValue, t));
-             transform.GetComponent<SpriteRenderer>().color = newColor;
+             shield.GetComponent<SpriteRenderer>().color = newColor;
              yield return null;
          }
          yield return new WaitForSecondsRealtime(bTime);
         for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
          {
-             Color newColor = new Color(1, 1, 1, Mathf.Lerp(aValue, 1, t));
-             transform.GetComponent<SpriteRenderer>().color = newColor;
+             Color newColor = new Color(1, 1, 1, Mathf.Lerp(aValue, 0, t));
+             shield.GetComponent<SpriteRenderer>().color = newColor;
              yield return null;
          }
+         shield.SetActive(false);
          OffInvisible?.Invoke();
         // isInvisible = false;
         // col2D.enabled = true;

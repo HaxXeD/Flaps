@@ -3,7 +3,7 @@ using TMPro;
 
 public class SettingButtons : MonoBehaviour
 {
-    // public event System.Action<string> OnClicked;
+    public event System.Action OnPause,OnUnpause;
     UIManager uiManager;
     // Start is called before the first frame update
     void Start()
@@ -31,7 +31,7 @@ public class SettingButtons : MonoBehaviour
 
     public void ShowPauseUI(){
         uiManager.GetPauseUI().SetActive(true);
-        Time.timeScale = 0f;
+        OnPause?.Invoke();
     }
     // public void ShowQuestionUI(){
     //     uiManager.GetQuestionUI().SetActive(true);
@@ -62,7 +62,10 @@ public class SettingButtons : MonoBehaviour
     // }
     public void HidePauseUI()
     {
+        // FindObjectOfType<PlayerMovement>().StartEaseUp();
+        // OnUnpause?.Invoke();
+        FindObjectOfType<PlayerMovement>().OnUnpause.Invoke();
+
         uiManager.GetPauseUI().GetComponent<UITween>().CloseSetting();
-        Time.timeScale = 1f;
     }
 }

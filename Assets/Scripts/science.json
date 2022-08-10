@@ -36,13 +36,6 @@
             "Incorrect3": "heavy"
         },
         {
-            "Question":"A force that moves an object closer",
-            "Correct": "pull",
-            "Incorrect1": "push",
-            "Incorrect2": "lift",
-            "Incorrect3": "heavy"
-        },
-        {
             "Question":"when a object is in ______ it changes its position",
             "Correct": "motion",
             "Incorrect1": "friction",
@@ -55,6 +48,292 @@
             "Incorrect1": "True",
             "Incorrect2": "may be",
             "Incorrect3": " dont know"
+        },
+        {
+            "Question":"What is friction?",
+            "Correct": "Objects rubbing against each other",
+            "Incorrect1": "movement for forces",
+            "Incorrect2": "apple falling from tree",
+            "Incorrect3": "blowing a candle"
+        },
+        {
+            "Question":"Which objects rubbing together gives most friction?",
+            "Correct": "Rocks",
+            "Incorrect1": "Ice",
+            "Incorrect2": "Cotton",
+            "Incorrect3": "Plastic"
+        },
+        {
+            "Question":"Force that acts as attraction between all objects in universe",
+            "Correct": "gravity",
+            "Incorrect1": "friction",
+            "Incorrect2": "light",
+            "Incorrect3": "slide"
+        },
+        {
+            "Question":"Friction is a force that acts when two objects _________ against each other.rub",
+            "Correct": "rub",
+            "Incorrect1": "move",
+            "Incorrect2": "stand",
+            "Incorrect3": "collide"
+        },
+        {
+            "Question": "what is said to be in motion",
+            "Correct": "moving car",
+            "Incorrect1": "sam reading a book",
+            "Incorrect2": "Jim starring at the car",
+            "Incorrect3": "Women waiting in lobby"
+        },
+        {
+            "Question": "What can you do to make a toy car go across a carpet as quickly as it does across a smooth floor?",
+            "Correct": "use more force",
+            "Incorrect1": "use less force",
+            "Incorrect2": "dont use force",
+            "Incorrect3": "do nothing it will move automatically"
+        },
+        {
+            "Question": "Which force holds your book on your desk?",
+            "Correct": "pull",
+            "Incorrect1": "light",
+            "Incorrect2": "gravity",
+            "Incorrect3": "friction"
+        },
+        {
+            "Question":"What do you get from a push",
+            "Correct": "to move and object away",
+            "Incorrect1": "pulling and object",
+            "Incorrect2": "rubbing against object",
+            "Incorrect3": "none of the above"
+        },
+        {
+            "Question":"Gravity?",
+            "Correct": "getting pulled towards the ground",
+            "Incorrect1": "pull object",
+            "Incorrect2": "to move someway",
+            "Incorrect3": "to make something attract"
+        },
+        {
+            "Question":"which of the following requires more force?",
+            "Correct": "pushing a car",
+            "Incorrect1": "holding a cup of coffee",
+            "Incorrect2": "blowing a feature",
+            "Incorrect3": "pulling a door"
+        },
+        {
+            "Question":"Rubbing your hands together is a simple example of ___.",
+            "Correct": "friction",
+            "Incorrect1": "gravity",
+            "Incorrect2": "speed",
+            "Incorrect3": "force"
+        },
+        {
+            "Question":"Pushing or pulling is an example of ____.",
+            "Correct": "force",
+            "Incorrect1": "work",
+            "Incorrect2": "speed",
+            "Incorrect3": "gravity"
+        },
+        {
+            "Question":"You know something is in motion when it....",
+            "Correct": "changes position",
+            "Incorrect1": "falls apart",
+            "Incorrect2": "stops",
+            "Incorrect3": "none of the above"
+        },
+        {
+            "Question":"Which of the following requires less force?",
+            "Correct": "blowing a candle",
+            "Incorrect1": "lifting heavy weights",
+            "Incorrect2": "holding a book",
+            "Incorrect3": "pushing a door"
+        },
+        {
+            "Question":"How can you go skating faster?",
+            "Correct": "use more force in your pushes",
+            "Incorrect1": "use less force in your pushes",
+            "Incorrect2": "moving towards gravity",
+            "Incorrect3": "moving forward"
+        },
+        {
+            "Question":"what is said to be not in motion",
+            "Correct": "A baby playing with ball",
+            "Incorrect1": "Ram riding a bycyle",
+            "Incorrect2": "Sam blowing ballon",
+            "Incorrect3": "John reading a book"
+        },
+        {
+            "Question":"The force that keeps you walking on Earth instead of floating away into space.",
+            "Correct": "gravity",
+            "Incorrect1": "friction",
+            "Incorrect2": "speed",
+            "Incorrect3": "none of the above"
+        },
+        {
+            "Question":"Which of the following is an example of force?",
+            "Correct": "A boy kicking a ball",
+            "Incorrect1": "A ball rolling",
+            "Incorrect2": "A ball at rest",
+            "Incorrect3": "A dog sleeping"
+        },
+        {
+            "Question":"What was the name of the scientist who discovered the Laws of Motion?",
+            "Correct": "Isaac Newton",
+            "Incorrect1": "Benjamin Franklin",
+            "Incorrect2": "Newton Issac",
+            "Incorrect3": "Thomas Edison"
+        },
+        {
+            "Question":"The bottom of a glass being pushed across a table. Is example of?",
+            "Correct": "friction",
+            "Incorrect1": "gravity",
+            "Incorrect2": "push",
+            "Incorrect3": "none of the above"
+        },
+        {
+            "Question":"Sammy was drawing bucket of filled with water from the well. Which force did he apply?",
+            "Correct": "Pull",
+            "Incorrect1": "push",
+            "Incorrect2": "gravity",
+            "Incorrect3": "friction"
+        },
+        {
+            "Question":"Which of the following is not a force?",
+            "Correct": "newton",
+            "Incorrect1": "gravity",
+            "Incorrect2": "push",
+            "Incorrect3": "friction"
+        },
+        {
+            "Question":"The force that causes a rock to roll downhill.",
+            "Correct": "gravity",
+            "Incorrect1": "friction",
+            "Incorrect2": "speed",
+            "Incorrect3": "none of the above"
+        },
+        {
+            "Question":"Skis sliding against snow",
+            "Correct": "friction",
+            "Incorrect1": "push",
+            "Incorrect2": "gravity",
+            "Incorrect3": "pull"
+        },
+        {
+            "Question":"____ is NOT a force.",
+            "Correct": "mass",
+            "Incorrect1": "gravity",
+            "Incorrect2": "friction",
+            "Incorrect3": "all the above"
+        },
+        {
+            "Question":"Jill pushes a box of books across the floor. What causes the box to move?",
+            "Correct": "a force",
+            "Incorrect1": "friction",
+            "Incorrect2": "gravity",
+            "Incorrect3": "none of the above"
+        },
+        {
+            "Question":"A force can cause an object to _________.",
+            "Correct": "accelerate",
+            "Incorrect1": "slow down",
+            "Incorrect2": "remain in place",
+            "Incorrect3": "change shape"
+        },
+        {
+            "Question":" Which of the following is a unit of measurement for force?",
+            "Correct": "newtons",
+            "Incorrect1": "liters",
+            "Incorrect2": "centimeters",
+            "Incorrect3": "meters"
+        },
+        {
+           "Question": "The support force of a table holding up a book is called ____________. ",
+            "Correct": "gravitational",
+            "Incorrect1": "normal force",
+            "Incorrect2": "push",
+            "Incorrect3": "friction"
+        },
+        {
+            "Question":"Which force slows a skateboard when a skateboarder puts a foot down to brake? ",
+            "Correct": "friction",
+            "Incorrect1": "motion",
+            "Incorrect2": "push",
+            "Incorrect3": "pull"
+        },
+        {
+           "Question":"A pull or push that acts on an object is called a(n) ",
+            "Correct": "force",
+            "Incorrect1": "gravity",
+            "Incorrect2": "speed",
+            "Incorrect3": "none of above"
+        },
+        {
+            "Question":"Typing on keyboard is which force?",
+            "Correct": "push",
+            "Incorrect1": "pull",
+            "Incorrect2": "friction",
+            "Incorrect3": "none of above"
+        },
+        {
+           "Question": "A type of force that pulls you towards the center of Earth is called.",
+            "Correct": "gravity",
+            "Incorrect1": "push",
+            "Incorrect2": "friction",
+            "Incorrect3": "shove"
+        },
+        {
+            "Question":"he force that causes a balloon that is out of helium to come back down to the ground.",
+            "Correct": "gravity",
+            "Incorrect1": "push",
+            "Incorrect2": "friction",
+            "Incorrect3": "shove"
+        },
+        {
+           "Question": "Friction will _________________ the amount of movement between two objects.",
+            "Correct": "decrease",
+            "Incorrect1": "increase",
+            "Incorrect2": "have no effect",
+            "Incorrect3": "speed up"
+        },
+        {
+           "Question": "Newton first described gravity while watching:",
+            "Correct": "an apple falling",
+            "Incorrect1": "smoke rise",
+            "Incorrect2": "someone walking",
+            "Incorrect3": "a car moving"
+        },
+        {
+           "Question": "A race car driving experiences ____________ friction with the road.",
+            "Correct": "sliding",
+            "Incorrect1": "static",
+            "Incorrect2": "gravity",
+            "Incorrect3": "all of the above"
+        },
+        {
+           "Question": "A washing machine pushed along a floor. Is example of?",
+            "Correct": "friction",
+            "Incorrect1": "push",
+            "Incorrect2": "pull",
+            "Incorrect3": "none of the above"
+        },
+        {
+           "Question": "To reduce friction, one could:",
+            "Correct": "use a lubricant such as grease",
+            "Incorrect1": "place extra weight on the object that is moving",
+            "Incorrect2": "remove wheels to reduce the downward pressure in trolleys",
+            "Incorrect3": "all of the above"
+        },
+        {
+           "Question": "_________is not a example of motion",
+            "Correct": "sam reading a book",
+            "Incorrect1": "fish swimming",
+            "Incorrect2": "boys playing soccer",
+            "Incorrect3": "all of the above"
+        },{
+            "Question":"An example of sliding friction is:",
+            "Correct": "writing in pencil",
+            "Incorrect1": "moving a refrigerator with a rolling trolley",
+            "Incorrect2": "a person sitting on a chair",
+            "Incorrect3": "none of the above"
         }
     ] 
 }

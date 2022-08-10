@@ -29,10 +29,10 @@ public class FillScript : MonoBehaviour
          fillBar.fillAmount -= fillLossTime;
         
          //color change
-         var green = new Color(0f, 1f, 0f, .5f);
-         var red = new Color(1f, 0f, 0f, .5f);
-         Color healthColor = Color.Lerp(red, green, fillBar.fillAmount);
-         fillBar.color = healthColor;
+        //  var green = new Color(0f, 1f, 0f, .5f);
+        //  var red = new Color(1f, 0f, 0f, .5f);
+        //  Color healthColor = Color.Lerp(red, green, fillBar.fillAmount);
+        //  fillBar.color = healthColor;
         
          yield return null;
         

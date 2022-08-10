@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class Spawner : MonoBehaviour
 {
-    
+
     public event System.Action OnQuestionEnable;
     [SerializeField] JsonReader jsonReader;
     [SerializeField] GameObject questionPanel;
@@ -25,21 +25,25 @@ public class Spawner : MonoBehaviour
     CapsuleCollider2D enemyCollider;
 
     [Header("Timer")]
-    [SerializeField] GameObject timer;
+    GameObject timer;
     [SerializeField] Vector2 spawnWaitTimeTimer;
     
     [Header("Invisible")]
-    [SerializeField] GameObject invisiblity;
+    GameObject invisiblity;
     [SerializeField] Vector2 spawnWaitTimeInvisiblity;
 
     [Header("Magnet")]
-    [SerializeField] GameObject magnet;
+    GameObject magnet;
     [SerializeField] Vector2 spawnWaitTimeMagnet;
      string correctAnswer;
     public string returnCorrectAnswer(){
         return correctAnswer;
     }
 
+
+    GameObject selectedPlane;
+    public PlaneSo[] planeSos;
+    public PowerUpSO[] powerUpSOs;
     [SerializeField] TMP_Text questionTxt;
     [SerializeField] TMP_Text[] ansTxt;
 
@@ -53,7 +57,11 @@ public class Spawner : MonoBehaviour
     Vector2 screenHalfSizeWorldUnits;
 
     int questionIndex = 0;
-    // Start is called before the first frame update
+
+    void Awake(){
+        // InitializePlayer(); 
+    }
+
     void Start()
     {
         spawnNextTimeFuel = spawnWaitTimeFuel.y;
@@ -68,36 +76,86 @@ public class Spawner : MonoBehaviour
         spawnNextTimeInvisiblity = spawnWaitTimeInvisiblity.y;
         spawnNextTimeMagnet = spawnWaitTimeMagnet.y;
         screenHalfSizeWorldUnits = new Vector2(Camera.main.aspect * Camera.main.orthographicSize, Camera.main.orthographicSize);
+
+        magnet = powerUpSOs[0].powerUP;
+        invisiblity = powerUpSOs[1].powerUP;
+        timer = powerUpSOs[2].powerUP;
+
         StartCoroutine(Question());
+        StartCoroutine(Coin());
+        
+        if(powerUpSOs[0].isPurchased){
+            StartCoroutine(Magnet());
+
+        }
+        if(powerUpSOs[1].isPurchased){
+            StartCoroutine(Invisiblity());
+        }
+
+        if(powerUpSOs[2].isPurchased){
+            StartCoroutine(Timer());
+        }
+        StartCoroutine(Enemy());
         FindObjectOfType<lowerCollider>().OnPlayerDeath += StopCoroutineQ;
     }
+    // Update is called once per frame
 
     void StopCoroutineQ(){
-        StopCoroutine(Question());
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        // Fuel();
-        Coin();
-        Enemy();
-        Timer();
-        Invisiblity();
-        Magnet();
+
+        StopAllCoroutines();
     }
 
-    private void Timer()
+    private IEnumerator Timer()
     {
-        if (Time.time > spawnNextTimeTimer)
-        {
-            spawnNextTimeTimer = Time.time + Mathf.Lerp(spawnWaitTimeTimer.y, spawnWaitTimeTimer.x, difficulty.getDifficultyPercent());
-            Instanciate(timer);
+        yield return new WaitForSeconds(spawnNextTimeTimer);
+        spawnNextTimeTimer = Mathf.Lerp(spawnWaitTimeTimer.y, spawnWaitTimeTimer.x, difficulty.getDifficultyPercent());
+        Instanciate(timer);
+        StartCoroutine(Timer());
+    }
+    private IEnumerator Invisiblity()
+    {
+        yield return new WaitForSeconds(spawnNextTimeInvisiblity);
+        spawnNextTimeInvisiblity = Time.time + Mathf.Lerp(spawnWaitTimeInvisiblity.y, spawnWaitTimeInvisiblity.x, difficulty.getDifficultyPercent());
+        Instanciate(invisiblity);
+        StartCoroutine(Invisiblity());
+    }
+
+    private IEnumerator Magnet()
+    {
+        yield return new WaitForSeconds(spawnNextTimeMagnet);
+        spawnNextTimeMagnet = Time.time + Mathf.Lerp(spawnWaitTimeMagnet.y, spawnWaitTimeMagnet.x, difficulty.getDifficultyPercent());
+        Instanciate(magnet);
+        StartCoroutine(Magnet());
+    }
+    
+    private void Instanciate(GameObject name)
+    {
+        Vector2 spawnPoints = new Vector2(screenHalfSizeWorldUnits.x + .5f, Random.Range(-screenHalfSizeWorldUnits.y + .5f, screenHalfSizeWorldUnits.y - .5f));
+        Instantiate(name, spawnPoints, Quaternion.identity);
+    }
+
+    private IEnumerator Coin()
+    {
+        yield return new WaitForSeconds(spawnNextTimeCoin);
+        spawnNextTimeCoin = Mathf.Lerp(spawnWaitTimeCoin.y, spawnWaitTimeCoin.x, difficulty.getDifficultyPercent());
+        Instanciate(coin);
+        StartCoroutine(Coin());
+    }
+
+    private IEnumerator Enemy()
+    {
+        yield return new WaitForSeconds(spawnNextTimeEnemy);
+        spawnNextTimeEnemy = Mathf.Lerp(spawnWaitTimeEnemy.y, spawnWaitTimeEnemy.x, difficulty.getDifficultyPercent());
+        Instanciate(enemy);
+        if(FindObjectOfType<PlayerMovement>() != null){
+            FindObjectOfType<PlayerMovement>().OnInvisible += DisableCOllider;
+            FindObjectOfType<PlayerMovement>().OffInvisible += EnableCollider;
         }
+        StartCoroutine(Enemy());
     }
 
     IEnumerator Question()
     {
-        
         yield return new WaitForSecondsRealtime(spawnNextTimeFuel);
         print(questionIndex);
         correctAnswer = jsonReader.myQuestionList.questions[questionIndex].Correct;
@@ -123,77 +181,16 @@ public class Spawner : MonoBehaviour
             answerList.RemoveAt(RandomValue);
         }
         questionIndex++;
-
-
             // Instanciate(fuel);
     }
 
     public void AddFuel(){
-
-        // if(correctAnswer == transform.GetChild(0).GetComponent<TMP_Text>().text){
-        //     fillScript.GetComponent<Image>().fillAmount = 1;
-        // }
-        // correctAnswer == answer?fillScript.GetComponent<Image>().fillAmount = 1;
-        // settingButtons.HideQuestionUI();
         questionPanel.GetComponent<UITween>().CloseSetting();
         Time.timeScale = 0f;
         Time.fixedDeltaTime = Time.timeScale * 0.02f;
         StartCoroutine(FindObjectOfType<EaseUp>().PowerUpTime(0f,2f));
         StartCoroutine(Question());
 
-    }
-    // IEnumerator PowerUpTime(float time, float timertime)
-    // {
-    //     yield return new WaitForSecondsRealtime(time);
-    //     StartCoroutine(ScaleTime(Time.timeScale, 1f, timertime));
-    // }
-
-    // IEnumerator ScaleTime(float start, float end, float time)
-    // {
-    //     float lastTime = Time.realtimeSinceStartup;
-    //     float timer = 0.0f;
-
-    //     while (timer < time)
-    //     {
-    //         Time.timeScale = Mathf.Lerp(start, end, timer / time);
-    //         Time.fixedDeltaTime = Time.timeScale * 0.02f;
-    //         timer += (Time.realtimeSinceStartup - lastTime);
-    //         lastTime = Time.realtimeSinceStartup;
-    //         yield return null;
-    //     }
-    //     Time.timeScale = end;
-    //     Time.fixedDeltaTime = Time.timeScale * 0.02f;
-    // }
-
-
-
-    private void Instanciate(GameObject name)
-    {
-        Vector2 spawnPoints = new Vector2(screenHalfSizeWorldUnits.x + .5f, Random.Range(-screenHalfSizeWorldUnits.y + .5f, screenHalfSizeWorldUnits.y - .5f));
-        Instantiate(name, spawnPoints, Quaternion.identity);
-    }
-
-    private void Coin()
-    {
-        if (Time.time > spawnNextTimeCoin)
-        {
-            spawnNextTimeCoin = Time.time + Mathf.Lerp(spawnWaitTimeCoin.y, spawnWaitTimeCoin.x, difficulty.getDifficultyPercent());
-            Instanciate(coin);
-        }
-    }
-
-
-    private void Enemy()
-    {
-        if (Time.time > spawnNextTimeEnemy)
-        {
-            spawnNextTimeEnemy = Time.time + Mathf.Lerp(spawnWaitTimeEnemy.y, spawnWaitTimeEnemy.x, difficulty.getDifficultyPercent());
-            Instanciate(enemy);
-            if(FindObjectOfType<PlayerMovement>() != null){
-                FindObjectOfType<PlayerMovement>().OnInvisible += DisableCOllider;
-                FindObjectOfType<PlayerMovement>().OffInvisible += EnableCollider;
-            }
-        }
     }
 
     private void DisableCOllider()
@@ -206,22 +203,16 @@ public class Spawner : MonoBehaviour
         enemyCollider.enabled = true;
     }
 
-    private void Invisiblity()
-    {
-        if (Time.time > spawnNextTimeInvisiblity)
-        {
-            spawnNextTimeInvisiblity = Time.time + Mathf.Lerp(spawnWaitTimeInvisiblity.y, spawnWaitTimeInvisiblity.x, difficulty.getDifficultyPercent());
-            Instanciate(invisiblity);
+    void InitializePlayer(){
+        for(int i = 0;i<planeSos.Length;i++){
+            if(!planeSos[i].isSelected){
+                continue;
+            }
+            else{
+                selectedPlane = planeSos[i].planeObject;
+            }
+            Vector2 spawnPoints = new Vector2(-screenHalfSizeWorldUnits.x + 10f,screenHalfSizeWorldUnits.y - 10f);
+            Instantiate(selectedPlane, spawnPoints, Quaternion.identity);
         }
     }
-
-        private void Magnet()
-    {
-        if (Time.time > spawnNextTimeMagnet)
-        {
-            spawnNextTimeMagnet = Time.time + Mathf.Lerp(spawnWaitTimeMagnet.y, spawnWaitTimeMagnet.x, difficulty.getDifficultyPercent());
-            Instanciate(magnet);
-        }
-    }
-    
 }
