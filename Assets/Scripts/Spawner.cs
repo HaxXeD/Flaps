@@ -35,6 +35,8 @@ public class Spawner : MonoBehaviour
     [Header("Magnet")]
     GameObject magnet;
     [SerializeField] Vector2 spawnWaitTimeMagnet;
+GameObject booster;
+        [SerializeField] Vector2 spawnWaitTimeBooster;
      string correctAnswer;
     public string returnCorrectAnswer(){
         return correctAnswer;
@@ -53,6 +55,7 @@ public class Spawner : MonoBehaviour
     float spawnNextTimeTimer;
     float spawnNextTimeInvisiblity;
     float spawnNextTimeMagnet;
+    float spawnNextTimeBooster;
 
     Vector2 screenHalfSizeWorldUnits;
 
@@ -80,6 +83,7 @@ public class Spawner : MonoBehaviour
         magnet = powerUpSOs[0].powerUP;
         invisiblity = powerUpSOs[1].powerUP;
         timer = powerUpSOs[2].powerUP;
+        booster = powerUpSOs[3].powerUP;
 
         StartCoroutine(Question());
         StartCoroutine(Coin());
@@ -94,6 +98,10 @@ public class Spawner : MonoBehaviour
 
         if(powerUpSOs[2].isPurchased){
             StartCoroutine(Timer());
+        }
+
+        if(powerUpSOs[3].isPurchased){
+            StartCoroutine(Rocket());
         }
         StartCoroutine(Enemy());
         FindObjectOfType<lowerCollider>().OnPlayerDeath += StopCoroutineQ;
@@ -127,10 +135,17 @@ public class Spawner : MonoBehaviour
         Instanciate(magnet);
         StartCoroutine(Magnet());
     }
+        private IEnumerator Rocket()
+    {
+        yield return new WaitForSeconds(spawnNextTimeBooster);
+        spawnNextTimeBooster = Time.time + Mathf.Lerp(spawnWaitTimeBooster.y, spawnWaitTimeBooster.x, difficulty.getDifficultyPercent());
+        Instanciate(booster);
+        StartCoroutine(Rocket());
+    }
     
     private void Instanciate(GameObject name)
     {
-        Vector2 spawnPoints = new Vector2(screenHalfSizeWorldUnits.x + .5f, Random.Range(-screenHalfSizeWorldUnits.y + .5f, screenHalfSizeWorldUnits.y - .5f));
+        Vector2 spawnPoints = new Vector2(screenHalfSizeWorldUnits.x + 1f, Random.Range(-screenHalfSizeWorldUnits.y + .5f, screenHalfSizeWorldUnits.y - .5f));
         Instantiate(name, spawnPoints, Quaternion.identity);
     }
 

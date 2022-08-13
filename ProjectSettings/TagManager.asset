@@ -12,6 +12,7 @@ TagManager:
   - invisible
   - magnet
   - coincollector
+  - rocket
   layers:
   - Default
   - TransparentFX

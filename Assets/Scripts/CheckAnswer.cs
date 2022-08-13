@@ -7,11 +7,11 @@ using UnityEngine.UI;
 
 public class CheckAnswer : MonoBehaviour
 {
-Spawner spawner;
-    FillScript fillScript;
+    Spawner spawner;
+    [SerializeField] FillScript fillScript;
     public void CheckAns(){
         if(transform.GetChild(0).GetComponent<TMP_Text>().text == spawner.returnCorrectAnswer()){
-            fillScript.GetComponent<Image>().fillAmount = 1f;
+            fillScript.refillGauge?.Invoke();
             print("correct");
         }
         else{
@@ -24,7 +24,6 @@ Spawner spawner;
     void Start()
     {
         spawner = FindObjectOfType<Spawner>();
-        fillScript = FindObjectOfType<FillScript>();
     }
 
     // Update is called once per frame

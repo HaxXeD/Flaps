@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Chimpvine | %UNITY_WEB_NAME%</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="https://chimpvine.org/gameAssets/css/common-game.css">
+    <script src="https://chimpvine.org/gameAssets/js/common-game.js"></script>
+    <script src="TemplateData/1-lock.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    
+    <script>
+      UnityLoader.compatibilityCheck = function(e,t,r){t();};
+      var unityInstance = UnityLoader.instantiate("unityContainer", "%UNITY_WEBGL_BUILD_URL%", {onProgress: UnityProgress});
+    </script>
+    
+    
+  </head>
+  <body>
+    
+    <div class="webgl-content" style="width: 100%; height: 100%">
+      <div id="unityContainer" ></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div id = "scale" class="fullscreen"  value="Lock - landscape" onclick="unityInstance.SetFullscreen(1)" ></div>
+        <div id="Fs_screen" class="title">Full Screen</div>
+        
+      </div>
+    </div>
+    <script>
+      
+    </script>
+  </body>
+</html>

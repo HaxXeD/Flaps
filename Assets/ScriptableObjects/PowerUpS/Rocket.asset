@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b022ec720b9a54e47bf8029ebd8d877e, type: 3}
   m_Name: Rocket
   m_EditorClassIdentifier: 
+  powerUP: {fileID: 6091978756744214930, guid: 755c51f2d5266bc479e3029ff3a1d261, type: 3}
   powerUpName: Rocket
   powerUpImage: {fileID: 21300000, guid: 93cf9053eb1fa544c893488602bb69f3, type: 3}
   powerUpCost: 800

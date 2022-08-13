@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.replicastudios.link": "file:C:/Users/Admin/Downloads/replica-unity-link-v0.0.1.tgz",
     "com.unity.2d.animation": "3.2.17",
     "com.unity.2d.common": "2.1.2",
     "com.unity.2d.pixel-perfect": "4.0.1",

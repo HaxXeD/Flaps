@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public UnityEvent OnUnpause = new UnityEvent();
     public event System.Action OnInvisible,OffInvisible;
+    event System.Action OnRocket;
     GameObject magnetBox,shield;
     bool isInvisible = false;
     public bool ReturnIsInvisible(){
@@ -35,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         StartCoroutine(FindObjectOfType<EaseUp>().PowerUpTime(.5f,2f));
         FindObjectOfType<SettingButtons>().OnPause+=StopEaseUp;
         FindObjectOfType<SettingButtons>().OnUnpause+=StartEaseUp;
+        OnRocket+=DisableCouroutine;
     }
 
     void Start(){
@@ -62,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //enable player controller
         PlayerController();
@@ -118,6 +120,28 @@ public class PlayerMovement : MonoBehaviour
             magnetBox.GetComponent<SpriteRenderer>().color = newColor;
             StartCoroutine(MagnetEnableDisable(.5f,1f,10f));
         }
+
+        if(collision.CompareTag("rocket")){
+            OnRocket?.Invoke();
+            // rb.velocity = Vector2.up * impulse;
+            Time.timeScale = 3f;
+            Time.fixedDeltaTime = Time.timeScale * 0.02f;
+            // rb.gravityScale = 0f;
+            // CanFly = false;
+            rb.bodyType = RigidbodyType2D.Static;
+            OnInvisible?.Invoke();
+            StartCoroutine(FindObjectOfType<EaseUp>().PowerUpTime(5f,5f));
+            StartCoroutine(PowerUpEnd(11f));
+        }
+    }
+
+    IEnumerator PowerUpEnd(float waitTime){
+        yield return new WaitForSecondsRealtime(waitTime);
+        // rb.gravityScale = 3f;
+        CanFly = true;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        // rb.velocity = Vector2.up * impulse;
+        OffInvisible?.Invoke();
     }
     IEnumerator MagnetEnableDisable(float aValue, float aTime, float bTime){
         magnetBox.SetActive(true);
