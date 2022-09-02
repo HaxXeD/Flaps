@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9063182662240017057}
   - component: {fileID: 2177246896140130884}
   m_Layer: 8
-  m_Name: GameObject
+  m_Name: MagnetAura
   m_TagString: coincollector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 707836197}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.008, y: -0.012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6200718290115427863}
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 037bd7d7cf5583d46b28db4193e32695, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0d1fa929b48aba9429c5507c29553503, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,7 +106,7 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 707836197}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 7a3b19ce5f0931440853b1c50b54067a, type: 2}
   m_Animations:
@@ -125,13 +125,14 @@ GameObject:
   m_Component:
   - component: {fileID: 8032482045967254557}
   - component: {fileID: 2063394751927913696}
+  - component: {fileID: 6283624918319176184}
   m_Layer: 0
   m_Name: Invisibility shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8032482045967254557
 Transform:
   m_ObjectHideFlags: 0
@@ -141,7 +142,7 @@ Transform:
   m_GameObject: {fileID: 2745958707803800158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6200718290115427863}
   m_RootOrder: 1
@@ -185,7 +186,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c807f43757680ab448c6b5ea54f7c069, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1208c754b8b9db34ca7dcdd139e2198e, type: 3}
   m_Color: {r: 0.7688679, g: 1, b: 0.99095017, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -196,6 +197,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!111 &6283624918319176184
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2745958707803800158}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 7a3b19ce5f0931440853b1c50b54067a, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7a3b19ce5f0931440853b1c50b54067a, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &6200718290115427860
 GameObject:
   m_ObjectHideFlags: 0

@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         //enable player controller
         PlayerController();
@@ -128,7 +128,9 @@ public class PlayerMovement : MonoBehaviour
             Time.fixedDeltaTime = Time.timeScale * 0.02f;
             // rb.gravityScale = 0f;
             // CanFly = false;
-            rb.bodyType = RigidbodyType2D.Static;
+            CanFly = false;
+            rb.velocity = Vector2.zero;
+            rb.gravityScale = 0f;
             OnInvisible?.Invoke();
             StartCoroutine(FindObjectOfType<EaseUp>().PowerUpTime(5f,5f));
             StartCoroutine(PowerUpEnd(11f));
@@ -139,10 +141,13 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSecondsRealtime(waitTime);
         // rb.gravityScale = 3f;
         CanFly = true;
+        rb.gravityScale = 3f;
+        // rb.velocity = Vector2.one;
         rb.bodyType = RigidbodyType2D.Dynamic;
         // rb.velocity = Vector2.up * impulse;
         OffInvisible?.Invoke();
     }
+
     IEnumerator MagnetEnableDisable(float aValue, float aTime, float bTime){
         magnetBox.SetActive(true);
         float alpha = magnetBox.GetComponent<SpriteRenderer>().color.a;
@@ -197,6 +202,7 @@ public class PlayerMovement : MonoBehaviour
         //enemy collision detection
         if (collision.gameObject.tag == "enemy")
         {
+            listAudio.PlayAudioWithOneShot(19);
             print("hello");
             collision.collider.isTrigger = true;
             DisableRigidbody();

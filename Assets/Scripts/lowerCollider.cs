@@ -9,6 +9,7 @@ public class lowerCollider : MonoBehaviour
     { 
         if(collision.gameObject == player)
         {
+            FindObjectOfType<ListAudio>().PlayAudioWithOneShot(20);
             OnPlayerDeath?.Invoke();
             Destroy(player);
         }

@@ -7,6 +7,7 @@ public class LevelTween : MonoBehaviour
     [SerializeField]CanvasGroup background;
     void OnEnable()
     {
+        background.alpha = 0f;
         LevelPanel.transform.localPosition = new Vector2(Screen.width+500,transform.localPosition.y);
 
         Home.transform.DOLocalMoveX(-Screen.width-500f,.5f).SetEase(Ease.Linear).OnComplete(()=>Home.SetActive(false));

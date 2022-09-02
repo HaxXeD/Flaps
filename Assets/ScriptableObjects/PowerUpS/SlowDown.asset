@@ -16,4 +16,4 @@ MonoBehaviour:
   powerUpName: Slow Down
   powerUpImage: {fileID: 21300000, guid: b086c8d8da98eea48addf786f98c5714, type: 3}
   powerUpCost: 150
-  isPurchased: 0
+  isPurchased: 1

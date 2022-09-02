@@ -16,4 +16,4 @@ MonoBehaviour:
   powerUpName: Rocket
   powerUpImage: {fileID: 21300000, guid: 93cf9053eb1fa544c893488602bb69f3, type: 3}
   powerUpCost: 800
-  isPurchased: 0
+  isPurchased: 1

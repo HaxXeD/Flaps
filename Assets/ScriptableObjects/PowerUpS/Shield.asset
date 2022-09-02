@@ -16,4 +16,4 @@ MonoBehaviour:
   powerUpName: Shield
   powerUpImage: {fileID: 21300000, guid: c807f43757680ab448c6b5ea54f7c069, type: 3}
   powerUpCost: 100
-  isPurchased: 0
+  isPurchased: 1

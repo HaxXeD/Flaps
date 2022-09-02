@@ -30,7 +30,7 @@ public class TutorialManager : MonoBehaviour
         listAudio.PlayAudioWithOneShot(8);
         displayImage.sprite = tutorialImages[imageIndex];
         displayImage.transform.position = new Vector2(-Screen.width,imagePosition.y);
-        displayImage.transform.DOLocalMoveX(0,1f).SetEase(Ease.OutSine);
+        displayImage.transform.DOLocalMoveX(0,3f);
         StartCoroutine(Types());
     }
 
@@ -59,7 +59,7 @@ public class TutorialManager : MonoBehaviour
 
                 switch(imageIndex){
                     case 1:
-                        displayImage.transform.DOJump(imagePosition,2f,1,.2f).SetEase(Ease.InSine).SetDelay(3f).OnComplete(()=>{
+                        displayImage.transform.DOJump(imagePosition,1.5f,1,1f).SetEase(Ease.InSine).SetDelay(3f).OnComplete(()=>{
                             displayImage.transform.DOLocalMoveX(Screen.width,1f).SetDelay(1f);
                         });
                     break;
