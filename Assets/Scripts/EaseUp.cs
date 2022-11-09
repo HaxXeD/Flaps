@@ -25,7 +25,4 @@ public class EaseUp : MonoBehaviour
         Time.timeScale = end;
         Time.fixedDeltaTime = Time.timeScale * 0.02f;
     }
-
-    
-
 }

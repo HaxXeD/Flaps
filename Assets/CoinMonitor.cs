@@ -4,6 +4,7 @@ using TMPro;
 public class CoinMonitor : MonoBehaviour
 {
     TMP_Text coinTxt;
+    [HideInInspector]
     public UnityEvent coinText = new UnityEvent();
     int totalcoin;
 

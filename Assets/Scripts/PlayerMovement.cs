@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public UnityEvent OnUnpause = new UnityEvent();
     public event System.Action OnInvisible,OffInvisible;
     event System.Action OnRocket;
-    GameObject magnetBox,shield;
+    [SerializeField]GameObject magnetBox,shield;
     bool isInvisible = false;
     public bool ReturnIsInvisible(){
         return isInvisible;

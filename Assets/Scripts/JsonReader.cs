@@ -13,7 +13,6 @@ public class JsonReader : MonoBehaviour
         public string Incorrect1;
         public string Incorrect2;
         public string Incorrect3;
-
     }
 
     [System.Serializable]
