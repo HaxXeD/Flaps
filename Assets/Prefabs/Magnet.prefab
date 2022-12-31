@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6091978756744214941}
   - component: {fileID: 2989923829181652766}
   - component: {fileID: 876081802272089876}
+  - component: {fileID: 3823534769152030858}
   m_Layer: 0
   m_Name: Magnet
   m_TagString: magnet
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 33d72f798050d0f48b0981bfd9ffd87f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f615b368cd2bcb6428ee5995cbcaf1ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +100,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.33
+  m_Radius: 0.48
 --- !u!114 &2989923829181652766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +125,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 6091978756744214930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6481709ea13784145bb0f75d1305656e, type: 3}
+  m_Script: {fileID: 11500000, guid: 194c3a6e6d9e0d442a66715397b8ab67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &3823534769152030858
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6091978756744214930}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bcdf694510865b2498f5d4a05d6f380f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

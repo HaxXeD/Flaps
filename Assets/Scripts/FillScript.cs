@@ -6,8 +6,8 @@ using UnityEngine.Events;
 
 public class FillScript : MonoBehaviour
 {
-    public event Action onFuelEmpty;
-    public UnityEvent refillGauge = new UnityEvent();
+    public event Action<bool> OnFuelEmpty;
+    [HideInInspector] public UnityEvent refillGauge = new UnityEvent();
     TutorialManager tutorialManager;
     CheckAnswer checkAnswer;
     Image fillBar;
@@ -27,39 +27,23 @@ public class FillScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(addingfill){
-            StartCoroutine(ProgressDial());
-        }
-        else if(!addingfill){
-            StartCoroutine(AddfillProgressDial());
-        }
+        if(addingfill)StartCoroutine(ProgressDial());
+        else if(!addingfill)StartCoroutine(AddfillProgressDial());
     }
 
     private IEnumerator ProgressDial()
     {        
-         fillBar.fillAmount -= fillLossTime;
-        
-         //color change
-        //  var green = new Color(0f, 1f, 0f, .5f);
-        //  var red = new Color(1f, 0f, 0f, .5f);
-        //  Color healthColor = Color.Lerp(red, green, fillBar.fillAmount);
-        //  fillBar.color = healthColor;
-        
-         yield return null;
-        
-        if(fillBar.fillAmount==0)
-            onFuelEmpty?.Invoke();   
+        fillBar.fillAmount -= fillLossTime;
+        yield return null;
+        if(fillBar.fillAmount==0)OnFuelEmpty?.Invoke(false);   
     }
 
     private IEnumerator AddfillProgressDial(){
         fillBar.fillAmount+=0.005f;
         yield return null;
 
-        if(fillBar.fillAmount==1)
-            addingfill = true;
+        if(fillBar.fillAmount==1)addingfill = true;
     }
 
-    void OnRefill(){
-        addingfill = false;
-    }
+    void OnRefill()=> addingfill = false;
 }

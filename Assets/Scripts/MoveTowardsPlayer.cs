@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class MoveTowardsPlayer : MonoBehaviour
+public class CoinBehavior : MonoBehaviour
 {
     GameObject Player;
     // Start is called before the first frame update
@@ -13,7 +13,7 @@ public class MoveTowardsPlayer : MonoBehaviour
     void Update()
     {   
         if(Player!=null){
-        transform.position = Vector2.MoveTowards(transform.position,Player.transform.position,17*Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position,Player.transform.position,17*Time.deltaTime);
         }
     }
 }

@@ -1,0 +1,354 @@
+{
+    "questions":[
+        {
+            "Question": "2 x 1 x 2 = __",
+            "Correct": "4",
+            "Incorrect1": "8",
+            "Incorrect2": "6",
+            "Incorrect3": "3"
+        },
+        {
+            "Question": "4 x 2 x 1 = __",
+            "Correct": "8",
+            "Incorrect1": "10",
+            "Incorrect2": "9",
+            "Incorrect3": "12"
+        },
+        {
+            "Question": "5 x 5 x 1 = __",
+            "Correct": "25",
+            "Incorrect1": "20",
+            "Incorrect2": "15",
+            "Incorrect3": "10"
+        },
+        {
+            "Question": "3 x 2 x 3 = __",
+            "Correct": "18",
+            "Incorrect1": "12",
+            "Incorrect2": "21",
+            "Incorrect3": "27"
+        },
+        {
+            "Question": "4 x 2 x 5 = __",
+            "Correct": "40",
+            "Incorrect1": "60",
+            "Incorrect2": "120",
+            "Incorrect3": "45"
+        },
+        {
+            "Question": "4 x 2 x 4 = __",
+            "Correct": "32",
+            "Incorrect1": "16",
+            "Incorrect2": "36",
+            "Incorrect3": "24"
+        },
+        {
+            "Question": "2 x 1 x 1 = __",
+            "Correct": "2",
+            "Incorrect1": "20",
+            "Incorrect2": "12",
+            "Incorrect3": "10"
+        },
+        {
+            "Question": "3 x 4 x 2 = __",
+            "Correct": "24",
+            "Incorrect1": "30",
+            "Incorrect2": "36",
+            "Incorrect3": "22"
+        },
+        {
+            "Question": "5 x 3 x 2 = __",
+            "Correct": "30",
+            "Incorrect1": "35",
+            "Incorrect2": "40",
+            "Incorrect3": "45"
+        },
+        {
+            "Question": "6 x 2 x 4 = __",
+            "Correct": "48",
+            "Incorrect1": "56",
+            "Incorrect2": "40",
+            "Incorrect3": "32"
+        },
+        {
+            "Question": "5 x 3 x 4 = __",
+            "Correct": "60",
+            "Incorrect1": "80",
+            "Incorrect2": "72",
+            "Incorrect3": "75"
+        },
+        {
+            "Question": "2 x 10 x 3 = __",
+            "Correct": "60",
+            "Incorrect1": "90",
+            "Incorrect2": "80",
+            "Incorrect3": "70"
+        },
+        {
+            "Question": "9 x 4 x 5 = __",
+            "Correct": "180",
+            "Incorrect1": "165",
+            "Incorrect2": "360",
+            "Incorrect3": "130"
+        },
+        {
+            "Question": "3 x 8 x 7 = __",
+            "Correct": "168",
+            "Incorrect1": "154",
+            "Incorrect2": "142",
+            "Incorrect3": "171"
+        },
+        {
+            "Question": "10 x 6 x 8 = __",
+            "Correct": "480",
+            "Incorrect1": "460",
+            "Incorrect2": "430",
+            "Incorrect3": "380"
+        },
+        {
+            "Question": "9 x 9 x 6 = __",
+            "Correct": "486",
+            "Incorrect1": "564",
+            "Incorrect2": "429",
+            "Incorrect3": "405"
+        },
+        {
+            "Question": "10 x 5 x 10 = __",
+            "Correct": "500",
+            "Incorrect1": "50",
+            "Incorrect2": "5,000",
+            "Incorrect3": "150"
+        },
+        {
+            "Question": "6 x 9 x 5 = __",
+            "Correct": "270",
+            "Incorrect1": "250",
+            "Incorrect2": "330",
+            "Incorrect3": "310"
+        },
+        {
+            "Question": "7 x 5 x 10 = __",
+            "Correct": "350",
+            "Incorrect1": "375",
+            "Incorrect2": "320",
+            "Incorrect3": "450"
+        },
+        {
+            "Question": "8 x 4 x 9 = __",
+            "Correct": "288",
+            "Incorrect1": "256",
+            "Incorrect2": "360",
+            "Incorrect3": "224"
+        }, {
+            "Question": "2 x 4 x 3 x 5 = __",
+            "Correct": "120",
+            "Incorrect1": "126",
+            "Incorrect2": "240",
+            "Incorrect3": "140"
+        },
+        {
+            "Question": "3 x 5 x 1 x 2 = __",
+            "Correct": "30",
+            "Incorrect1": "35",
+            "Incorrect2": "70",
+            "Incorrect3": "42"
+        },
+        {
+            "Question": "1 x 4 x 4 x 4 = __",
+            "Correct": "64",
+            "Incorrect1": "80",
+            "Incorrect2": "56",
+            "Incorrect3": "96"
+        },
+        {
+            "Question": "5 x 2 x 2 x 5 = __",
+            "Correct": "100",
+            "Incorrect1": "150",
+            "Incorrect2": "120",
+            "Incorrect3": "160"
+        },
+        {
+            "Question": "3 x 2 x 1 x 2 = __",
+            "Correct": "12",
+            "Incorrect1": "18",
+            "Incorrect2": "24",
+            "Incorrect3": "26"
+        },
+        {
+            "Question": "1 x 5 x 4 x 7 = __",
+            "Correct": "140",
+            "Incorrect1": "210",
+            "Incorrect2": "120",
+            "Incorrect3": "160"
+        },
+        {
+            "Question": "2 x 4 x 3 x 4 = __",
+            "Correct": "96",
+            "Incorrect1": "84",
+            "Incorrect2": "72",
+            "Incorrect3": "99"
+        },
+        {
+            "Question": "5 x 6 x 2 x 2 = __",
+            "Correct": "120",
+            "Incorrect1": "180",
+            "Incorrect2": "126",
+            "Incorrect3": "140"
+        },
+        {
+            "Question": "2 x 4 x 3 x 3 = __",
+            "Correct": "72",
+            "Incorrect1": "78",
+            "Incorrect2": "84",
+            "Incorrect3": "76"
+        },
+        {
+            "Question": "7 x 5 x 2 x 5 = __",
+            "Correct": "350",
+            "Incorrect1": "330",
+            "Incorrect2": "450",
+            "Incorrect3": "420"
+        },
+        {
+            "Question": "6 x 3 x 3 x 3 = __",
+            "Correct": "162",
+            "Incorrect1": "216",
+            "Incorrect2": "192",
+            "Incorrect3": "206"
+        },
+        {
+            "Question": "2 x 7 x 6 x 5 = __",
+            "Correct": "420",
+            "Incorrect1": "440",
+            "Incorrect2": "470",
+            "Incorrect3": "402"
+        },
+        {
+            "Question": "4 x 5 x 8 x 10 = __",
+            "Correct": "1,600",
+            "Incorrect1": "1,800",
+            "Incorrect2": "2,500",
+            "Incorrect3": "1,900"
+        },
+        {
+            "Question": "3 x 2 x 2 x 9 = __",
+            "Correct": "108",
+            "Incorrect1": "112",
+            "Incorrect2": "105",
+            "Incorrect3": "180"
+        },
+        {
+            "Question": "8 x 4 x 6 x 4 = __",
+            "Correct": "768",
+            "Incorrect1": "678",
+            "Incorrect2": "856",
+            "Incorrect3": "567"
+        },
+        {
+            "Question": "7 x 3 x 9 x 5 = __",
+            "Correct": "945",
+            "Incorrect1": "892",
+            "Incorrect2": "735",
+            "Incorrect3": "915"
+        },
+        {
+            "Question": "6 x 2 x 6 x 2 = __",
+            "Correct": "144",
+            "Incorrect1": "188",
+            "Incorrect2": "148",
+            "Incorrect3": "184"
+        },
+        {
+            "Question": "9 x 4 x 9 x 4 = __",
+            "Correct": "1,296",
+            "Incorrect1": "2,196",
+            "Incorrect2": "996",
+            "Incorrect3": "896"
+        },
+        {
+            "Question": "5 x 7 x 10 x 3 = __",
+            "Correct": "1,050",
+            "Incorrect1": "1,850",
+            "Incorrect2": "1,550",
+            "Incorrect3": "1,505"
+        },
+        {
+            "Question": "10 x 2 x 8 x 6 = __",
+            "Correct": "960",
+            "Incorrect1": "990",
+            "Incorrect2": "690",
+            "Incorrect3": "906"
+        },
+        {
+            "Question": "5 x 7 x 5 x 9 = __",
+            "Correct": "1,575",
+            "Incorrect1": "1,375",
+            "Incorrect2": "1,415",
+            "Incorrect3": "1,245"
+        },
+        {
+            "Question": "3 x 10 x 10 x 10 = __",
+            "Correct": "3,000",
+            "Incorrect1": "300",
+            "Incorrect2": "3,330",
+            "Incorrect3": "330"
+        },
+        {
+            "Question": "8 x 4 x 7 x 10 = __",
+            "Correct": "2,240",
+            "Incorrect1": "2,120",
+            "Incorrect2": "1,930",
+            "Incorrect3": "2,040"
+        },
+        {
+            "Question": "6 x 10 x 8 x 5 = __",
+            "Correct": "2,400",
+            "Incorrect1": "2,440",
+            "Incorrect2": "2,620",
+            "Incorrect3": "2,700"
+        },
+        {
+            "Question": "9 x 8 x 7 x 6 = __",
+            "Correct": "3,024",
+            "Incorrect1": "2,862",
+            "Incorrect2": "3,071",
+            "Incorrect3": "2,924"
+        },
+        {
+            "Question": "7 x 3 x 7 x 3 = __",
+            "Correct": "441",
+            "Incorrect1": "421",
+            "Incorrect2": "329",
+            "Incorrect3": "324"
+        },
+        {
+            "Question": "5 x 9 x 10 x 10 = __",
+            "Correct": "4,500",
+            "Incorrect1": "3,500",
+            "Incorrect2": "7,500",
+            "Incorrect3": "5,400"
+        },
+        {
+            "Question": "3 x 4 x 10 x 3 = __",
+            "Correct": "360",
+            "Incorrect1": "3,600",
+            "Incorrect2": "390",
+            "Incorrect3": "3,900"
+        },
+        {
+            "Question": "10 x 6 x 6 x 8 = __",
+            "Correct": "2,880",
+            "Incorrect1": "2,680",
+            "Incorrect2": "1,230",
+            "Incorrect3": "2,840"
+        },
+        {
+            "Question": "7 x 4 x 9 x 10 = __",
+            "Correct": "2,520",
+            "Incorrect1": "2,220",
+            "Incorrect2": "2,250",
+            "Incorrect3": "2,570"
+        }
+
+    ]
+}

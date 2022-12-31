@@ -1,14 +1,13 @@
 ﻿using UnityEngine;
 using TMPro;
 
-
 public class CheckAnswer : MonoBehaviour
 {
     ListAudio listAudio;
-    Spawner spawner;
+    QuestionSpawner questionSpawner;
     [SerializeField] FillScript fillScript;
     public void CheckAns(){
-        if(transform.GetChild(0).GetComponent<TMP_Text>().text == spawner.returnCorrectAnswer()){
+        if(transform.GetChild(0).GetComponent<TMP_Text>().text == questionSpawner.returnCorrectAnswer()){
             fillScript.refillGauge?.Invoke();
             listAudio.PlayAudioWithOneShot(18);
             print("correct");
@@ -18,18 +17,12 @@ public class CheckAnswer : MonoBehaviour
             print("incorrect");
         }
 
-        spawner.AddFuel();
+        questionSpawner.SetQuestionInactive();
     }
     // Start is called before the first frame update
     void Start()
     {
-        spawner = FindObjectOfType<Spawner>();
+        questionSpawner = FindObjectOfType<QuestionSpawner>();
         listAudio = FindObjectOfType<ListAudio>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

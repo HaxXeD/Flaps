@@ -8,11 +8,11 @@ TagManager:
   - player
   - fuel
   - enemy
-  - timer
   - invisible
   - magnet
   - coincollector
-  - rocket
+  - booster
+  - slowdown
   layers:
   - Default
   - TransparentFX

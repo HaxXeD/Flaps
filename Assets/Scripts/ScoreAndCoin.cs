@@ -39,7 +39,6 @@ public class ScoreAndCoin: MonoBehaviour
     {
         if (highScore < CurrentScore())
             PlayerPrefs.SetInt("highscore", CurrentScore());
-        // print(PlayerPrefs.GetInt("highscore"));
         return PlayerPrefs.GetInt("highscore");        
     }
     public int TotalCoins()

@@ -1,0 +1,428 @@
+{
+    "questions":[
+        {
+            "Question": "I am ___ to the store.",
+            "Correct": "walking",
+            "Incorrect1": "walked",
+            "Incorrect2": "walks",
+            "Incorrect3": "walk"
+        },
+        {
+            "Question":"He is ___ in the shower.",
+            "Correct": "singing",
+            "Incorrect1": "sing",
+            "Incorrect2": "sings",
+            "Incorrect3": "sang"
+        },
+        {
+            "Question": "She is ___ breakfast.",
+            "Correct": "eating",
+            "Incorrect1": "eats",
+            "Incorrect2": "eat",
+            "Incorrect3": "ate"
+        },
+        {
+            "Question":"We are ___ for the test.",
+            "Correct": "studying",
+            "Incorrect1": "studied",
+            "Incorrect2": "studies",
+            "Incorrect3": "study"
+        },
+        {
+            "Question": "She ___ Spanish fluently.",
+            "Correct": "speaks",
+            "Incorrect1": "speak",
+            "Incorrect2": "speaking",
+            "Incorrect3": "speaked"
+        },
+        {
+            "Question":"He has been ___ hard.",
+            "Correct": "working",
+            "Incorrect1": "works",
+            "Incorrect2": "worked",
+            "Incorrect3": "work"
+        },
+        {
+            "Question": "They are ___ soon.",
+            "Correct": "visiting",
+            "Incorrect1": "visit",
+            "Incorrect2": "visits",
+            "Incorrect3": "visited"
+        },
+        {
+            "Question":"He ___ in a bank.",
+            "Correct": "works",
+            "Incorrect1": "worker",
+            "Incorrect2": "working",
+            "Incorrect3": "work"
+        },
+        {
+            "Question": "She ___ beautifully.",
+            "Correct": "sings",
+            "Incorrect1": "sung",
+            "Incorrect2": "singing",
+            "Incorrect3": "sing"
+        },
+        {
+            "Question":"We are ___ to the beach.",
+            "Correct": "biking",
+            "Incorrect1": "bike",
+            "Incorrect2": "bikes",
+            "Incorrect3": "biked"
+        },
+        {
+            "Question": "I am ___ to the store.",
+            "Correct": "going",
+            "Incorrect1": "go ",
+            "Incorrect2": "goes",
+            "Incorrect3": "went"
+        },
+        {
+            "Question":"I ___ breakfast this morning.",
+            "Correct": "ate",
+            "Incorrect1": "eating",
+            "Incorrect2": "eats",
+            "Incorrect3": "eaten"
+        },
+        {
+            "Question": "I am ___ on the computer.",
+            "Correct": "typing",
+            "Incorrect1": "typed",
+            "Incorrect2": "types",
+            "Incorrect3": "typer"
+        },
+        {
+            "Question":"He is ___ a book.",
+            "Correct": "reading",
+            "Incorrect1": "read",
+            "Incorrect2": "reads",
+            "Incorrect3": "reader"
+        },
+        {
+            "Question": "They ___ to the movies last night.",
+            "Correct": "went",
+            "Incorrect1": "going",
+            "Incorrect2": "goes",
+            "Incorrect3": "go"
+        },
+        {
+            "Question":"We are ___ a movie.",
+            "Correct": "watching",
+            "Incorrect1": "watch",
+            "Incorrect2": "watched",
+            "Incorrect3": "watcher"
+        },
+        {
+            "Question": "She will be ___ the party.",
+            "Correct": "attending",
+            "Incorrect1": "attend",
+            "Incorrect2": "attends",
+            "Incorrect3": "attended"
+        },
+        {
+            "Question":"He had ___ in a bank.",
+            "Correct": "worked",
+            "Incorrect1": "work",
+            "Incorrect2": "works",
+            "Incorrect3": "working"
+        },
+        {
+            "Question": "He was ___ on the phone.",
+            "Correct": "talking",
+            "Incorrect1": "talks",
+            "Incorrect2": "talk",
+            "Incorrect3": "talked"
+        },
+        {
+            "Question":"We have ___ to the mall.",
+            "Correct": "gone",
+            "Incorrect1": "go",
+            "Incorrect2": "went",
+            "Incorrect3": "goes"
+        },
+        {
+            "Question": "They had been ___ for hours.",
+            "Correct": "waiting",
+            "Incorrect1": "waits",
+            "Incorrect2": "wait",
+            "Incorrect3": "waited"
+        },
+        {
+            "Question":"The cat ___ on the couch.",
+            "Correct": "slept",
+            "Incorrect1": "sleep ",
+            "Incorrect2": "sleeping",
+            "Incorrect3": "sleeper"
+        },
+        {
+            "Question": "They are ___ catch.",
+            "Correct": "playing",
+            "Incorrect1": "plays",
+            "Incorrect2": "play",
+            "Incorrect3": "played"
+        },
+        {
+            "Question":" I ___ a headache yesterday.",
+            "Correct": "have",
+            "Incorrect1": "has",
+            "Incorrect2": "have been",
+            "Incorrect3": "has been"
+        },
+        {
+            "Question": "I had been ___ errands.",
+            "Correct": "running",
+            "Incorrect1": "runs",
+            "Incorrect2": "ran",
+            "Incorrect3": "run"
+        },
+        {
+            "Question":"He has been ___ in the shower.",
+            "Correct": "singing",
+            "Incorrect1": "sing",
+            "Incorrect2": "sings",
+            "Incorrect3": "sang"
+        },
+        {
+            "Question": "We are ___ in the backyard.",
+            "Correct": "sitting",
+            "Incorrect1": "sit",
+            "Incorrect2": "sits",
+            "Incorrect3": "sat"
+        },
+        {
+            "Question":"The sky ___ blue yesterday.",
+            "Correct": "was",
+            "Incorrect1": "were",
+            "Incorrect2": "are",
+            "Incorrect3": "is"
+        },
+        {
+            "Question": "She was ___ a nap.",
+            "Correct": "taking",
+            "Incorrect1": "take",
+            "Incorrect2": "took",
+            "Incorrect3": "takes"
+        },
+        {
+            "Question":"You are ___ the birds.",
+            "Correct": "feeding",
+            "Incorrect1": "feed",
+            "Incorrect2": "fed",
+            "Incorrect3": "feeds"
+        },
+        {
+            "Question": "I ___ to the store yesterday.",
+            "Correct": "went",
+            "Incorrect1": "go ",
+            "Incorrect2": "goes",
+            "Incorrect3": "gone"
+        },
+        {
+            "Question":"He is ___ basketball.",
+            "Correct": "playing",
+            "Incorrect1": "plays",
+            "Incorrect2": "play",
+            "Incorrect3": "played"
+        },
+        {
+            "Question": "She is ___ dinner.",
+            "Correct": "making",
+            "Incorrect1": "makes",
+            "Incorrect2": "make",
+            "Incorrect3": "made"
+        },
+        {
+            "Question":"We are ___ in the choir.",
+            "Correct": "singing",
+            "Incorrect1": "sing",
+            "Incorrect2": "sings",
+            "Incorrect3": "sang"
+        },
+        {
+            "Question": "She ___ beautifully at the concert.",
+            "Correct": "sang",
+            "Incorrect1": "singing",
+            "Incorrect2": "sing",
+            "Incorrect3": "sung"
+        },
+        {
+            "Question":"You are ___ the grass.",
+            "Correct": "cutting",
+            "Incorrect1": "cut",
+            "Incorrect2": "cuts",
+            "Incorrect3": "cutter"
+        },
+        {
+            "Question": "I am ___ the furniture.",
+            "Correct": "dusting",
+            "Incorrect1": "dust",
+            "Incorrect2": "dusts",
+            "Incorrect3": "dusted"
+        },
+        {
+            "Question":"He is ___ rope.",
+            "Correct": "skipping",
+            "Incorrect1": "skips",
+            "Incorrect2": "skip",
+            "Incorrect3": "skipped"
+        },
+        {
+            "Question": "We will be ___ next month.",
+            "Correct": "travelling",
+            "Incorrect1": "travel",
+            "Incorrect2": "travels",
+            "Incorrect3": "travelled"
+        },
+        {
+            "Question":"They are ___ ice cream.",
+            "Correct": "eating",
+            "Incorrect1": "eat",
+            "Incorrect2": "eats",
+            "Incorrect3": "ate"
+        },
+        {
+            "Question": "She had been ___ video games.",
+            "Correct": "playing",
+            "Incorrect1": "plays",
+            "Incorrect2": "play",
+            "Incorrect3": "played"
+        },
+        {
+            "Question":"I am ___ TV.",
+            "Correct": "watching",
+            "Incorrect1": "watch",
+            "Incorrect2": "warched",
+            "Incorrect3": "watches"
+        },
+        {
+            "Question": "He was ___ to work.",
+            "Correct": "walking",
+            "Incorrect1": "walks",
+            "Incorrect2": "walked",
+            "Incorrect3": "walk"
+        },
+        {
+            "Question":"He is ___ breakfast.",
+            "Correct": "making",
+            "Incorrect1": "makes",
+            "Incorrect2": "make",
+            "Incorrect3": "made"
+        },
+        {
+            "Question": " I have been ___ emails.",
+            "Correct": "writing",
+            "Incorrect1": "write",
+            "Incorrect2": "writes",
+            "Incorrect3": "wrote"
+        },
+        {
+            "Question":"We are ___ rope.",
+            "Correct": "jumping",
+            "Incorrect1": "jump",
+            "Incorrect2": "jumps",
+            "Incorrect3": "jumped"
+        },
+        {
+            "Question": "They are ___ the dog.",
+            "Correct": "washing",
+            "Incorrect1": "wash",
+            "Incorrect2": "washes",
+            "Incorrect3": "washed"
+        },
+        {
+            "Question":"The book ___ on the table when I came in.",
+            "Correct": "was",
+            "Incorrect1": "were",
+            "Incorrect2": "is",
+            "Incorrect3": "are"
+        },
+        {
+            "Question": "I am ___ the car.",
+            "Correct": "fixing",
+            "Incorrect1": "fix",
+            "Incorrect2": "fixed",
+            "Incorrect3": "fixes"
+        },
+        {
+            "Question":"She will ___ Spanish fluently when she moves to Spain.",
+            "Correct": "speak",
+            "Incorrect1": "speaks",
+            "Incorrect2": "speaking",
+            "Incorrect3": "spoke"
+        },
+        {
+            "Question": "He will ___ in a bank when he graduates.",
+            "Correct": "work",
+            "Incorrect1": "works",
+            "Incorrect2": "works",
+            "Incorrect3": "worked"
+        },
+        {
+            "Question":"We have ___ to the park.",
+            "Correct": "gone",
+            "Incorrect1": "went",
+            "Incorrect2": "goes",
+            "Incorrect3": "go"
+        },
+        {
+            "Question": "They will be ___ overnight.",
+            "Correct": "staying",
+            "Incorrect1": "stays",
+            "Incorrect2": "stayed",
+            "Incorrect3": "stay"
+        },
+        {
+            "Question":"She has been ___ a blog.",
+            "Correct": "writing",
+            "Incorrect1": "write",
+            "Incorrect2": "writes",
+            "Incorrect3": "wrote"
+        },
+        {
+            "Question": "I had been ___ for the exam.",
+            "Correct": "studying",
+            "Incorrect1": "study",
+            "Incorrect2": "studies",
+            "Incorrect3": "studied"
+        },
+        {
+            "Question":"He will be ___ the meeting.",
+            "Correct": "attending",
+            "Incorrect1": "addend",
+            "Incorrect2": "attends",
+            "Incorrect3": "attend"
+        },
+        {
+            "Question": "I will be ___ to the store later.",
+            "Correct": "going",
+            "Incorrect1": "go",
+            "Incorrect2": "went",
+            "Incorrect3": "goes"
+        },
+        {
+            "Question":"We are ___ video games.",
+            "Correct": "playing",
+            "Incorrect1": "plays",
+            "Incorrect2": "play",
+            "Incorrect3": "played"
+        },
+        {
+            "Question": "They are ___ the closet.",
+            "Correct": "organizing",
+            "Incorrect1": "organizes",
+            "Incorrect2": "organize",
+            "Incorrect3": "organized"
+        },
+        {
+            "Question":"She will ___ beautifully at the wedding.",
+            "Correct": "sing",
+            "Incorrect1": "sang",
+            "Incorrect2": "sings",
+            "Incorrect3": "sung"
+        }
+        
+    ] 
+    
+}
+       
+       

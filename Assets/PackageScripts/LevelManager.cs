@@ -24,7 +24,7 @@ public class LevelManager : MonoBehaviour
     private void EndTrasition(int _index)
     {
         SceneManager.LoadScene(_index);
-        Time.timeScale = 1f;
+        // Time.timeScale = 1f;
         trasitionImage.GetComponent<CanvasGroup>().DOFade(0f,.5f).SetUpdate(true).OnComplete(()=>sceneTrasition.GetTrasitionImage().SetActive(false));
     }
 

@@ -3,13 +3,13 @@ using System.Collections;
 
 public class EaseUp : MonoBehaviour
 {
-    public IEnumerator PowerUpTime(float time, float timertime)
-    {
+    public IEnumerator StartEaseUp(float time, float timertime, Coroutine CoroutineType)
+    { 
         yield return new WaitForSecondsRealtime(time);
-        StartCoroutine(ScaleTime(Time.timeScale, 1f, timertime));
+        CoroutineType = StartCoroutine(ScaleTime(Time.timeScale,1f,timertime));   
     }
 
-    IEnumerator ScaleTime(float start, float end, float time)
+    public IEnumerator ScaleTime(float start, float end, float time)
     {
         float lastTime = Time.realtimeSinceStartup;
         float timer = 0.0f;

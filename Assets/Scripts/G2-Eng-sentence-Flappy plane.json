@@ -1,0 +1,426 @@
+{
+    "questions":[
+        {
+            "Question": "You have to do your homework.",
+            "Correct": "Imperative",
+            "Incorrect1": "Question",
+            "Incorrect2": "Exclamation",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"When will the party start? ",
+            "Correct": "Question",
+            "Incorrect1": "Imperative",
+            "Incorrect2": "Statement",
+            "Incorrect3": "Exclamation"
+        },
+        {
+            "Question":"Let's go out for dinner tonight!",
+            "Correct": "Exclamation",
+            "Incorrect1": "Question",
+            "Incorrect2": "Imperative",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"They are going to the movies tonight.",
+            "Correct": "Statement",
+            "Incorrect1": "Exclamation",
+            "Incorrect2": "Question",
+            "Incorrect3": "Imperative"
+        },
+        {
+            "Question":"You must finish your assignments.",
+            "Correct": "Imperative",
+            "Incorrect1": "Question",
+            "Incorrect2": "Exclamation",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"What's your favorite color? ",
+            "Correct": "Question",
+            "Incorrect1": "Imperative",
+            "Incorrect2": "Statement",
+            "Incorrect3": "Exclamation"
+        },
+        {
+            "Question":"Please clean your room.",
+            "Correct": "Imperative",
+            "Incorrect1": "Question",
+            "Incorrect2": "Exclamation",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"I can't believe you got an A on the test! ",
+            "Correct": "Exclamation",
+            "Incorrect1": "Question",
+            "Incorrect2": "Imperative",
+            "Incorrect3": "Statement"
+        },  
+        {
+            "Question":"The cat is sleeping on the couch.",
+            "Correct": "Statement",
+            "Incorrect1": "Exclamation",
+            "Incorrect2": "Question",
+            "Incorrect3": "Imperative"
+        },
+        {
+            "Question":"Did you finish your project yet? ",
+            "Correct": "Question",
+            "Incorrect1": "Imperative",
+            "Incorrect2": "Statement",
+            "Incorrect3": "Exclamation"
+        },
+        {
+            "Question":"Stop wasting your time.",
+            "Correct": "Imperative",
+            "Incorrect1": "Question",
+            "Incorrect2": "Exclamation",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"Wow, that was amazing! ",
+            "Correct": "Exclamation",
+            "Incorrect1": "Question",
+            "Incorrect2": "Imperative",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"Are you ready to go? ",
+            "Correct": "Question",
+            "Incorrect1": "Imperative",
+            "Incorrect2": "Statement",
+            "Incorrect3": "Exclamation"
+        },
+        {
+            "Question":"The book is on the table.",
+            "Correct": "Statement",
+            "Incorrect1": "Exclamation",
+            "Incorrect2": "Question",
+            "Incorrect3": "Imperative"
+        },
+        {
+            "Question":"Don't forget to call your mom.",
+            "Correct": "Imperative",
+            "Incorrect1": "Question",
+            "Incorrect2": "Exclamation",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"What time is it? ",
+            "Correct": "Question",
+            "Incorrect1": "Imperative",
+            "Incorrect2": "Statement",
+            "Incorrect3": "Exclamation"
+        },
+        {
+            "Question":"Turn off the TV.",
+            "Correct": "Imperative",
+            "Incorrect1": "Question",
+            "Incorrect2": "Exclamation",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"I have a headache.",
+            "Correct": "Statement",
+            "Incorrect1": "Exclamation",
+            "Incorrect2": "Question",
+            "Incorrect3": "Imperative"
+        },
+        {
+            "Question":"Hurray, we won the game!",
+            "Correct": "Exclamation",
+            "Incorrect1": "Question",
+            "Incorrect2": "Imperative",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"Did you submit your application?",
+            "Correct": "Question",
+            "Incorrect1": "Imperative",
+            "Incorrect2": "Statement",
+            "Incorrect3": "Exclamation"
+        },
+        {
+            "Question":"You must do your research.",
+            "Correct": "Imperative",
+            "Incorrect1": "Question",
+            "Incorrect2": "Exclamation",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"Wow, you look amazing!",
+            "Correct": "Exclamation",
+            "Incorrect1": "Question",
+            "Incorrect2": "Imperative",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"He is taller than his brother.",
+            "Correct": "Statement",
+            "Incorrect1": "Exclamation",
+            "Incorrect2": "Question",
+            "Incorrect3": "Imperative"
+        },
+        {
+            "Question":"Where is the nearest store? ",
+            "Correct": "Question",
+            "Incorrect1": "Imperative",
+            "Incorrect2": "Statement",
+            "Incorrect3": "Exclamation"
+        },
+        {
+            "Question":"Finish your homework now.",
+            "Correct": "Imperative",
+            "Incorrect1": "Question",
+            "Incorrect2": "Exclamation",
+            "Incorrect3": "Statement"
+        },  
+        {
+            "Question":"I'm so proud of you! ",
+            "Correct": "Exclamation",
+            "Incorrect1": "Question",
+            "Incorrect2": "Imperative",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"Did you read the book? ",
+            "Correct": "Question",
+            "Incorrect1": "Imperative",
+            "Incorrect2": "Statement",
+            "Incorrect3": "Exclamation"
+        },
+        {
+            "Question":"She speaks Spanish fluently.",
+            "Correct": "Statement",
+            "Incorrect1": "Exclamation",
+            "Incorrect2": "Question",
+            "Incorrect3": "Imperative"
+        },
+        {
+            "Question":"Don't forget to brush your teeth.",
+            "Correct": "Imperative",
+            "Incorrect1": "Question",
+            "Incorrect2": "Exclamation",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"Yay, we made it! ",
+            "Correct": "Exclamation",
+            "Incorrect1": "Question",
+            "Incorrect2": "Imperative",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"What did you eat for lunch? ",
+            "Correct": "Question",
+            "Incorrect1": "Imperative",
+            "Incorrect2": "Statement",
+            "Incorrect3": "Exclamation"
+        },
+        {
+            "Question":"I am going to the store.",
+            "Correct": "Statement",
+            "Incorrect1": "Exclamation",
+            "Incorrect2": "Question",
+            "Incorrect3": "Imperative"
+        },
+        {
+            "Question":"Put away your toys.",
+            "Correct": "Imperative",
+            "Incorrect1": "Question",
+            "Incorrect2": "Exclamation",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"That's incredible! ",
+            "Correct": "Exclamation",
+            "Incorrect1": "Question",
+            "Incorrect2": "Imperative",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"Did you finish the assignment? ",
+            "Correct": "Question",
+            "Incorrect1": "Imperative",
+            "Incorrect2": "Statement",
+            "Incorrect3": "Exclamation"
+        },
+        {
+            "Question":"Listen to your teacher.",
+            "Correct": "Imperative",
+            "Incorrect1": "Question",
+            "Incorrect2": "Exclamation",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"Wow, that's a great idea! ",
+            "Correct": "Exclamation",
+            "Incorrect1": "Question",
+            "Incorrect2": "Imperative",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"Who won the game? ",
+            "Correct": "Question",
+            "Incorrect1": "Imperative",
+            "Incorrect2": "Statement",
+            "Incorrect3": "Exclamation"
+        },
+        {
+            "Question":"Pick up your clothes.",
+            "Correct": "Imperative",
+            "Incorrect1": "Question",
+            "Incorrect2": "Exclamation",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"Hurray, we did it! ",
+            "Correct": "Exclamation",
+            "Incorrect1": "Question",
+            "Incorrect2": "Imperative",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"Did you buy the groceries? ",
+            "Correct": "Question",
+            "Incorrect1": "Imperative",
+            "Incorrect2": "Statement",
+            "Incorrect3": "Exclamation"
+        },
+        {
+            "Question":"Stop playing video games.",
+            "Correct": "Imperative",
+            "Incorrect1": "Question",
+            "Incorrect2": "Exclamation",
+            "Incorrect3": "Statement"
+        },  
+        {
+            "Question":"I love this song! ",
+            "Correct": "Exclamation",
+            "Incorrect1": "Question",
+            "Incorrect2": "Imperative",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"What do you want for dinner? ",
+            "Correct": "Question",
+            "Incorrect1": "Imperative",
+            "Incorrect2": "Statement",
+            "Incorrect3": "Exclamation"
+        },
+        {
+            "Question":"Make sure you turn in your report.",
+            "Correct": "Imperative",
+            "Incorrect1": "Question",
+            "Incorrect2": "Exclamation",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"You did it! ",
+            "Correct": "Exclamation",
+            "Incorrect1": "Question",
+            "Incorrect2": "Imperative",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"Did you finish your chores? ",
+            "Correct": "Question",
+            "Incorrect1": "Imperative",
+            "Incorrect2": "Statement",
+            "Incorrect3": "Exclamation"
+        },
+        {
+            "Question":"She sings beautifully.",
+            "Correct": "Statement",
+            "Incorrect1": "Exclamation",
+            "Incorrect2": "Question",
+            "Incorrect3": "Imperative"
+        },
+        {
+            "Question":"Put on your shoes.",
+            "Correct": "Imperative",
+            "Incorrect1": "Question",
+            "Incorrect2": "Exclamation",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"That's so hilarious! ",
+            "Correct": "Exclamation",
+            "Incorrect1": "Question",
+            "Incorrect2": "Imperative",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"What do you think about this? ",
+            "Correct": "Question",
+            "Incorrect1": "Imperative",
+            "Incorrect2": "Statement",
+            "Incorrect3": "Exclamation"
+        },
+        {
+            "Question":"Don't forget to do your homework.",
+            "Correct": "Imperative",
+            "Incorrect1": "Question",
+            "Incorrect2": "Exclamation",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"I can't believe we won! ",
+            "Correct": "Exclamation",
+            "Incorrect1": "Question",
+            "Incorrect2": "Imperative",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"The sky is blue.",
+            "Correct": "Statement",
+            "Incorrect1": "Exclamation",
+            "Incorrect2": "Question",
+            "Incorrect3": "Imperative"
+        },
+        {
+            "Question":"What time are you coming home? ",
+            "Correct": "Question",
+            "Incorrect1": "Imperative",
+            "Incorrect2": "Statement",
+            "Incorrect3": "Exclamation"
+        },
+        {
+            "Question":"Put away your dishes.",
+            "Correct": "Imperative",
+            "Incorrect1": "Question",
+            "Incorrect2": "Exclamation",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"Wow, that's awesome! ",
+            "Correct": "Exclamation",
+            "Incorrect1": "Question",
+            "Incorrect2": "Imperative",
+            "Incorrect3": "Statement"
+        },
+        {
+            "Question":"He works in a bank.",
+            "Correct": "Statement",
+            "Incorrect1": "Exclamation",
+            "Incorrect2": "Question",
+            "Incorrect3": "Imperative"
+        },
+        {
+            "Question":"Did you finish your project? ",
+            "Correct": "Question",
+            "Incorrect1": "Imperative",
+            "Incorrect2": "Statement",
+            "Incorrect3": "Exclamation"
+        },
+        {
+            "Question":"Do your best.",
+            "Correct": "Imperative",
+            "Incorrect1": "Question",
+            "Incorrect2": "Exclamation",
+            "Incorrect3": "Statement"
+        }
+        
+    ] 
+}
+            

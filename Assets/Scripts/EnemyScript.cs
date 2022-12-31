@@ -2,35 +2,36 @@
 
 public class EnemyScript : MonoBehaviour
 {
-    CapsuleCollider2D col2D;
-    PlayerMovement playerMovement;
+
+    [SerializeField] CapsuleCollider2D col2D;
+    
+    PlayerCollision playerCollision;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        col2D = GetComponent<CapsuleCollider2D>();
-        playerMovement = FindObjectOfType<PlayerMovement>();
-        if(playerMovement!=null){
-            playerMovement.OnInvisible += DisableCollider;
-            playerMovement.OffInvisible += EnableCollider;
-        }
+        playerCollision = FindObjectOfType<PlayerCollision>();
+        if(playerCollision==null)return;
+        //when shield is active disable collider
+        playerCollision.OnShieldActive += DisableCollider;
+        //when shield is inactive enable collider
+        playerCollision.OnShieldInactive += EnableCollider;
+
+        //negate the shield activation with collision
+        col2D.enabled = !playerCollision.ReturnShield();
     }
 
-    private void DisableCollider()
-    {
-        col2D.enabled = false;
-    }
+    private void DisableCollider() => col2D.enabled = false;
 
-    private void EnableCollider()
-    {
-        col2D.enabled = true;
-    }
+    private void EnableCollider() => col2D.enabled = true;
 
-    void OnDisable(){
-        if(playerMovement!=null){
-            playerMovement.OnInvisible -= DisableCollider;
-            playerMovement.OffInvisible -= EnableCollider;
 
-        }
+    //unsubscribe form all events on destory
+    void OnDestroy(){
+        if(playerCollision==null)return;
+        playerCollision.OnShieldActive -= DisableCollider;
+        playerCollision.OnShieldInactive -= EnableCollider;
     }
 }
 

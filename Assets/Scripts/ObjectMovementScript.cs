@@ -13,16 +13,12 @@ public class ObjectMovementScript : MonoBehaviour
     Vector2 pos;
     [SerializeField] Vector2 speedMinMax;
     float visibility;
-    //for Wave
     [SerializeField] Vector2 maxAmplitude;
-    //float currentAmplitude;
-    //float amplitude;
     float sinCenterY;
 
 
     private void Start()
     {
-        //amplitude = Random.Range(1,currentAmplitude);
         sinCenterY = transform.position.y;
         visibility = -Camera.main.aspect * Camera.main.orthographicSize - transform.localScale.x;
     }
