@@ -340,7 +340,7 @@ public class PlayerCollision : MonoBehaviour
 
     //Unsubscribe all event on destroy
     void OnDestroy(){
-    //    timeScaleController.OnQuestionStartTimeScaleSetToZero -= StopPowerCoroutines;
+       timeScaleController.OnQuestionStartTimeScaleSetToZero -= StopPowerCoroutines;
         questionSpawner.OnQuestionPanelInactive -= EnableGravityAndCollision;
         OnBoosterEnd -= EnableGravityAndCollision;
         OnSlowDownEnd -= SetSlowDownFalse;
