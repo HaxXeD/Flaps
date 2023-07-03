@@ -4,37 +4,26 @@ using DG.Tweening;
 
 public class LevelManager : MonoBehaviour
 {
-    SceneTrasition sceneTrasition;
-    GameObject trasitionImage;
+    SceneTransition sceneTransition;
+    GameObject transitionImage;
 
     void Start(){
-        sceneTrasition = FindObjectOfType<SceneTrasition>();
-        trasitionImage = sceneTrasition.GetTrasitionImage();
+        sceneTransition = FindObjectOfType<SceneTransition>();
+        transitionImage = sceneTransition.GetTransitionImage();
     }
     
     public void ChangeScene(int sceneIndex)
     {
-        // SceneManager.LoadScene(sceneIndex);
-        trasitionImage.SetActive(true);
-        trasitionImage.GetComponent<CanvasGroup>().alpha = 0f;
-        // trasitionImage.transform.localPosition = new Vector2(-Screen.width,trasitionImage.transform.localPosition.y);
-        trasitionImage.GetComponent<CanvasGroup>().DOFade(1f,.5f).SetUpdate(true).OnComplete(()=>{EndTrasition(sceneIndex);});
+        transitionImage.SetActive(true);
+        transitionImage.GetComponent<CanvasGroup>().alpha = 0f;
+        transitionImage.GetComponent<CanvasGroup>().DOFade(1f,.5f).SetUpdate(true).OnComplete(()=>{EndTransition(sceneIndex);});
     }
 
-    private void EndTrasition(int _index)
+    private void EndTransition(int _index)
     {
         SceneManager.LoadScene(_index);
-        // Time.timeScale = 1f;
-        trasitionImage.GetComponent<CanvasGroup>().DOFade(0f,.5f).SetUpdate(true).OnComplete(()=>sceneTrasition.GetTrasitionImage().SetActive(false));
+        transitionImage.GetComponent<CanvasGroup>().DOFade(0f,.5f).SetUpdate(true).OnComplete(()=>sceneTransition.GetTransitionImage().SetActive(false));
     }
-
-    // IEnumerator SceneChange(int _index)
-    // {
-    //     yield return new WaitForSecondsRealtime(.5f);
-    //     print("current index: " + _index);
-
-        
-    // }
 
     public void ReloadScene()
     {

@@ -2,20 +2,21 @@
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Events;
+using System;
 
 public class ChangePostProcessing : MonoBehaviour
 {   
     [HideInInspector] public UnityEvent OnSlowDownStart,
                                          OnSlowDownEnd,
                                          OnBoosterStart,
-                                         OnBoosterEnd;
+                                         OnBoosterEnd,
+                                         OnPlayerDeath;
     private Volume _v;
     private Bloom _bloom;
     private ChromaticAberration _chromaticAberration;
     private Vignette _vignette;
 
     private float lerpTimer;
-    // chromaticAberrationStartValue = 0, chromaticAberrationEndValue = .2f;
     [SerializeField] private float chipSpeed = .5f;
 
     private bool _chromaticAberrationBool = false,
@@ -33,6 +34,18 @@ public class ChangePostProcessing : MonoBehaviour
         OnSlowDownEnd.AddListener(SetChromaticAberrationFalse);
         OnBoosterStart.AddListener(SetVignetteTrue);
         OnBoosterEnd.AddListener(SetVignetteFalse);
+        OnPlayerDeath.AddListener(ResetValues);
+
+        _vignette.intensity.value = Mathf.Clamp(_vignette.intensity.value,0,.2f);
+        _chromaticAberration.intensity.value = Mathf.Clamp(_chromaticAberration.intensity.value,0,.2f);
+
+    }
+
+    private void ResetValues()
+    {
+        Debug.LogWarning("Reset Post Processing");
+        _chromaticAberrationBool = false;
+        _vignetteBool = false;
     }
 
     private void SetVignetteFalse()
@@ -60,20 +73,18 @@ public class ChangePostProcessing : MonoBehaviour
     }
 
     private void Update(){
-        LerpChromaticAberation();
+        LerpChromaticAberration();
         LerpVignette();
     }
 
     private void LerpVignette()
     {
-        _vignette.intensity.value = Mathf.Clamp(_vignette.intensity.value,0,.2f);
         if(_vignetteBool)LerpVignetteIntensityValue(0,.2f);
         else if(!_vignetteBool)LerpVignetteIntensityValue(.2f,0);
     }
 
-    private void LerpChromaticAberation()
+    private void LerpChromaticAberration()
     {
-        _chromaticAberration.intensity.value = Mathf.Clamp(_chromaticAberration.intensity.value,0,.2f);
         if(_chromaticAberrationBool)LerpChromaticAberrationIntensityValue(0,.2f);
         else if(!_chromaticAberrationBool)LerpChromaticAberrationIntensityValue(.2f,0);
     }

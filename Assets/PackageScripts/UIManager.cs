@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] GameObject SettingsUI,PauseUI,GameOverUI;
 
     [SerializeField] Slider brightnessSlider,saturationSlider,contrastSlider;
+    [SerializeField] TMP_Text currentScoreTxt,highScoreTxt;
 
     Canvas canvas;
 
@@ -62,5 +64,13 @@ public class UIManager : MonoBehaviour
     public Slider GetSaturation()
     {
         return saturationSlider;
+    }
+
+    public TMP_Text GetCurrentScore(){
+        return currentScoreTxt;
+    }
+
+    public TMP_Text GetHighScore(){
+        return highScoreTxt;
     }
 }

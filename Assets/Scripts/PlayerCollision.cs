@@ -17,7 +17,7 @@ public class PlayerCollision : MonoBehaviour
     [SerializeField] CapsuleCollider2D capsuleCollider2D;
 
 
-    //serialize quesiton spawner
+    //serialize question spawner
     [SerializeField]QuestionSpawner questionSpawner;
 
 
@@ -64,7 +64,6 @@ public class PlayerCollision : MonoBehaviour
 
     //Referencing Booleans
     bool isBoosterEnabled = false,
-        isSlowDownEnabled = false,
         isShieldActive = false;
 
 
@@ -75,7 +74,7 @@ public class PlayerCollision : MonoBehaviour
         changePostProcessing = FindObjectOfType<ChangePostProcessing>();
 
         //time scale event subscription is used due to subscription order of OnQuestionStart event
-        //where StopPowerCoroutine is subribed first before setting the time scale to zero, 
+        //where StopPowerCoroutine is subscribed first before setting the time scale to zero, 
         //this can be coded better but for now this will do.
         timeScaleController.OnQuestionStartTimeScaleSetToZero += StopPowerCoroutines;
         timeScaleController.OnPauseStopAllPowerUps += StopPowerCoroutines;
@@ -84,7 +83,7 @@ public class PlayerCollision : MonoBehaviour
         //When question is shown to the players
         questionSpawner.OnQuestionPanelActive += StopPowerCoroutines;
 
-        //When the question is answerd or not, player control is enabled again
+        //When the question is answered or not, player control is enabled again
         questionSpawner.OnQuestionPanelInactive += EnableGravityAndCollision;
         questionSpawner.OnQuestionPanelInactive += SetSlowDownFalse;
 
@@ -110,10 +109,7 @@ public class PlayerCollision : MonoBehaviour
 
     private void SetSlowDownFalse()
     {
-        //set slow down boolean to false
-        isSlowDownEnabled = false;
-
-        //reset slow down post prosessing
+        //reset slow down post processing
         changePostProcessing.OnSlowDownEnd.Invoke();
         print("Timer Has Ended"); 
     }
@@ -159,13 +155,12 @@ public class PlayerCollision : MonoBehaviour
             //if so, the slow down powerup is not activated
             if(isBoosterEnabled) return;
 
-            isSlowDownEnabled = true;
             listAudio.PlayAudioWithOneShot(4);
             
             //start slow down post processing
             changePostProcessing.OnSlowDownStart.Invoke();
 
-            //set timesclae to half 
+            //set timescale to half 
             OnPowerUp.Invoke(.5f);
             
             //cache slow down ease up enumerator
@@ -244,6 +239,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.gameObject.tag == "enemy" )
         {
+            changePostProcessing.OnPlayerDeath?.Invoke();
             StopPowerCoroutines();
             listAudio.PlayAudioWithOneShot(19);
             collision.collider.isTrigger = true;

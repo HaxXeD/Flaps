@@ -10,19 +10,21 @@ public class TimeScaleController : MonoBehaviour
                                 OnPauseStopAllPowerUps,
                                 OnUnpauseEnableControls;
 
-    [SerializeField] EaseUp easeUp;
     [SerializeField] QuestionSpawner questionSpawner;
     [SerializeField] PlayerCollision playerCollision;
-    void Start(){
+
+    Coroutine startTimeScale;
+    void Awake()
+    {
         //Ease in when the game starts
-        ManipulateTimeScale(0);
-        StartCoroutine(easeUp.ScaleTime(Time.timeScale,1,2f));
+        StartEase();
         questionSpawner.OnQuestionPanelActive += OnQuestionStarted;
         questionSpawner.OnQuestionPanelInactive += OnPauseInvoked;
         playerCollision.OnPowerUp += ManipulateTimeScale;
         OnPause.AddListener(OnPauseInvoked);
         OnUnpause.AddListener(OnUnpauseInvoked);
     }
+
 
     //Set time scale 
     public void ManipulateTimeScale(float timeScale){
@@ -43,6 +45,7 @@ public class TimeScaleController : MonoBehaviour
     //which then trancends when unpausing
     void OnPauseInvoked(){
         //stop all power up corouitnes
+        if(startTimeScale!= null)StopCoroutine(startTimeScale);
         OnPauseStopAllPowerUps?.Invoke();
         ManipulateTimeScale(0);
     }
@@ -52,7 +55,11 @@ public class TimeScaleController : MonoBehaviour
     {
         //Enable movement after some time
         OnUnpauseEnableControls?.Invoke();
+        StartEase();
+    }
+    private void StartEase()
+    {
         ManipulateTimeScale(0);
-        StartCoroutine(easeUp.ScaleTime(Time.timeScale,1,2f));
+        startTimeScale = StartCoroutine(FindObjectOfType<EaseUp>().ScaleTime(Time.timeScale, 1, 2f));
     }
 }

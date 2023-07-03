@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,16 +12,13 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         
-        if (PlayerPrefs.GetInt("FIRSTTIMEOPENING", 1) == 1)
+        if (PlayerPrefs.GetInt("FIRSTTIMEOPENINGMUSIC", 1) == 1)
         {
-            Debug.Log("First Time Opening");
+            Debug.Log("First Time Opening Music");
 
             //Set first time opening to false
-            PlayerPrefs.SetInt("FIRSTTIMEOPENING", 0);
-            gameMusic.volume = musicSlider.value = 0.5f;
-            gameSound.volume = soundSlider.value = 1f;
-            
-           
+            PlayerPrefs.SetInt("FIRSTTIMEOPENINGMUSIC", 0);
+            ResetMusic();
         }
         else
         {
@@ -29,25 +27,24 @@ public class AudioManager : MonoBehaviour
             gameSound.volume = soundSlider.value = PlayerPrefs.GetFloat("Sound");
 
         }
+
+        musicSlider.onValueChanged.AddListener(delegate{SetMusic();});
+        soundSlider.onValueChanged.AddListener(delegate{SetSFX();});
     }
 
-    private void Update()
+    public void ResetMusic()
     {
-        SetVolume();
+        gameMusic.volume = musicSlider.value = 0.5f;
+        gameSound.volume = soundSlider.value = 1f;
     }
 
-    private void SetVolume()
-    {
+    private void SetSFX(){
+        gameSound.volume = soundSlider.value;
+        PlayerPrefs.SetFloat("Sound",soundSlider.value);
+    }
+
+    private void SetMusic(){
         gameMusic.volume = musicSlider.value;
-        gameSound.volume = soundSlider.value;     
+        PlayerPrefs.SetFloat("Music",musicSlider.value);
     }
-
-
-    public void OnDestroy()
-    {
-        PlayerPrefs.SetFloat("Music", musicSlider.value);
-        PlayerPrefs.SetFloat("Sound", soundSlider.value);
-    }
-
-
 }

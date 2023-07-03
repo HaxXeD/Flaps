@@ -13,7 +13,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] Sprite[] tutorialImages;
 
     [SerializeField] GameObject fillGauge;
-    [SerializeField] GameObject fillScript;
+    [SerializeField] FillScript fillScript;
     int index;
     int imageIndex;
     [SerializeField] float typingSpeed;
@@ -30,7 +30,7 @@ public class TutorialManager : MonoBehaviour
         listAudio.PlayAudioWithOneShot(8);
         displayImage.sprite = tutorialImages[imageIndex];
         displayImage.transform.position = new Vector2(-Screen.width,imagePosition.y);
-        displayImage.transform.DOLocalMoveX(0,3f);
+        displayImage.transform.DOMove(imagePosition,3f);
         StartCoroutine(Types());
     }
 
@@ -60,11 +60,11 @@ public class TutorialManager : MonoBehaviour
                 switch(imageIndex){
                     case 1:
                         displayImage.transform.DOJump(imagePosition,1.5f,1,1f).SetEase(Ease.InSine).SetDelay(3f).OnComplete(()=>{
-                            displayImage.transform.DOLocalMoveX(Screen.width,1f).SetDelay(1f);
+                            displayImage.transform.DOLocalMoveX(Screen.width,1f);
                         });
                     break;
                     case 2:
-                        displayImage.transform.DOLocalMoveX(0,1f).OnComplete(()=>
+                        displayImage.transform.DOMove(imagePosition,1f).OnComplete(()=>
                             displayImage.transform.DOScale(Vector2.one*2f,0.5f));
                     break;
                     case 3:
@@ -84,7 +84,7 @@ public class TutorialManager : MonoBehaviour
                         fillGauge.SetActive(true);
                     break;
                     case 4:
-                        fillScript.GetComponent<FillScript>().refillGauge?.Invoke();
+                        fillScript.refillGauge?.Invoke();
                     break;
                 }
             }

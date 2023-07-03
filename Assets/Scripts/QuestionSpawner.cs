@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class QuestionSpawner : MonoBehaviour
 {
@@ -32,8 +33,10 @@ public class QuestionSpawner : MonoBehaviour
     //float for next wait time calculation
     private float _setActiveNextTimeQuestion;
 
+    private float question_time_loss_amount;
+
     //is question panel active boolean 
-    private bool _isQuesitonPanelActive = false;
+    private bool _isQuestionPanelActive = false;
 
     //string for correct answer
     private string _correctAnswer;
@@ -44,6 +47,10 @@ public class QuestionSpawner : MonoBehaviour
     //current index of the question
     private int _questionIndex;
 
+    [SerializeField] private Image questionTimer;
+    [SerializeField] private float questionWaitTime = 5f;
+
+
     //Lists of answers
     List<string> answerList = new List<string>();
 
@@ -53,13 +60,16 @@ public class QuestionSpawner : MonoBehaviour
     public IEnumerator I_QuestionPanelActiveSpan;
 
     Coroutine C_QuestionPanelSetActive,
-                C_SetQuestionInactiveIfUnanswered;
+                C_SetQuestionInactiveIfUnanswered,
+                C_QuestionTimer;
+
+
 
     void Start()
     {
 
         //When paused stop the question set active coroutine
-        timeScaleController.OnPause.AddListener(StopQuesitonPanelActiveCoroutine);
+        timeScaleController.OnPause.AddListener(StopQuestionPanelActiveCoroutine);
         //when unpaused restart it
         timeScaleController.OnUnpause.AddListener(StartQuestionPanelActiveCoroutine);
         
@@ -67,19 +77,22 @@ public class QuestionSpawner : MonoBehaviour
 
         StartQuestionPanelActiveCoroutine();
         
-        lowerCollider.OnPlayerDeath += StopQuesitonPanelActiveCoroutine;
+        lowerCollider.OnPlayerDeath += StopQuestionPanelActiveCoroutine;
+
     }
 
     private void StartQuestionPanelActiveCoroutine() => C_QuestionPanelSetActive = StartCoroutine(SetQuestionPanelActive());
 
-    private void StopQuesitonPanelActiveCoroutine() => StopCoroutine(C_QuestionPanelSetActive);
+    private void StopQuestionPanelActiveCoroutine() => StopCoroutine(C_QuestionPanelSetActive);
 
     IEnumerator SetQuestionPanelActive()
     {
-        //set quesiton panel active to true
-        _isQuesitonPanelActive = true;
+        //set question panel active to true
+        _isQuestionPanelActive = true;
 
-        //randomly select a queston form the parsed json file
+
+
+        //randomly select a questor form the parsed json file
         //which resides in a list and store it in the question index integer
         _questionIndex = Random.Range(0,jsonReader.myQuestionList.questions.Count);
         
@@ -102,7 +115,7 @@ public class QuestionSpawner : MonoBehaviour
         //calculate the next wait time 
         _setActiveNextTimeQuestion = Mathf.Lerp(setActiveWaitTimeQuestion.y, setActiveWaitTimeQuestion.x, difficulty.getDifficultyPercent());
 
-        //invoke event for when quesiton panel is set to active
+        //invoke event for when question panel is set to active
         OnQuestionPanelActive?.Invoke();
         print("Question Event Invoked");
 
@@ -117,32 +130,38 @@ public class QuestionSpawner : MonoBehaviour
         questionTxt.text = jsonReader.myQuestionList.questions[_questionIndex].Question;
 
         //run a loop to put answers for the answer list
-        //randomly in the answer arry
+        //randomly in the answer array
         for(int i = 0;i<4;i++){
             int RandomValue = Random.Range(0,answerList.Count);
             ansTxt[i].text = answerList[RandomValue];
             //remove the inserted value so it doesn't repeat
             answerList.RemoveAt(RandomValue);
         }
+
+        questionTimer.fillAmount = 1f;
+        question_time_loss_amount = Time.unscaledDeltaTime / questionWaitTime;
+
+        C_QuestionTimer = StartCoroutine(ProgressDial());
     }
 
     //set the question panel inactive if answer is not given
     IEnumerator SetQuestionInactiveIfUnanswered(){
         //wait for the given time
-        yield return new WaitForSecondsRealtime(5f);;
+        yield return new WaitForSecondsRealtime(questionWaitTime);;
         //check if the question panel is inactive, if true exit else
-        if(!_isQuesitonPanelActive)yield return null;
+        if(!_isQuestionPanelActive)yield return null;
         //Set the question panel to inactive
         SetQuestionInactive();
     }
        
-    //set the quesiton panel to inactive
+    //set the question panel to inactive
     public void SetQuestionInactive(){
         //if the set question inactive if unanswered is running then stop it
         if(C_SetQuestionInactiveIfUnanswered!=null)StopCoroutine(C_SetQuestionInactiveIfUnanswered);
         //set the question panel active boolean to false
-        _isQuesitonPanelActive = false;
-        //close the quesiton panel -> set it inactive
+        _isQuestionPanelActive = false;
+        StopCoroutine(C_QuestionTimer);
+        //close the question panel -> set it inactive
         questionPanel.GetComponent<UITween>().CloseSetting();
         //invoke question panel inactive event
         OnQuestionPanelInactive?.Invoke();
@@ -154,6 +173,18 @@ public class QuestionSpawner : MonoBehaviour
         jsonReader.myQuestionList.questions.RemoveAt(_questionIndex);
         //restart the question panel set active coroutine
         C_QuestionPanelSetActive = StartCoroutine(SetQuestionPanelActive());
+    }
+
+    private IEnumerator ProgressDial()
+    {        
+
+        questionTimer.fillAmount -= question_time_loss_amount;
+
+
+        // yield return new WaitForSecondsRealtime(0.02f);
+        yield return null;
+        question_time_loss_amount = Time.unscaledDeltaTime / questionWaitTime;
+        C_QuestionTimer = StartCoroutine(ProgressDial());
     }
 }
 

@@ -27,8 +27,8 @@ public class GameOver : MonoBehaviour
 
         settingButtons.ShowGameOverUI();
         GameObject HighSC = uIManager.GetGameOverUI().transform.GetChild(1).gameObject;
-        Score_Coin.transform.GetChild(1).transform.GetChild(0).GetComponent<TMP_Text>().text = "SCORE: " + (scoreAndCoin.CurrentScore() + scoreAndCoin.ReturnCoin()).ToString();
-        Score_Coin.transform.GetChild(1).transform.GetChild(1).GetComponent<TMP_Text>().text = "BEST: " + scoreAndCoin.HighScore().ToString();
+        settingButtons.SetCurrentScore("SCORE: " + (scoreAndCoin.CurrentScore() + scoreAndCoin.ReturnCoin()).ToString()) ;
+        settingButtons.SetHighScore("BEST: " + scoreAndCoin.HighScore().ToString());
         // HighSC.transform.GetChild(2).transform.GetChild(0).GetComponent<TMP_Text>().text = "COINS: " + scoreAndCoin.ReturnCoin().ToString();
         scoreAndCoin.TotalCoins();
     }
